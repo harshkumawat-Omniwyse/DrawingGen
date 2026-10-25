@@ -1,0 +1,92 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel nameMaxLength="128" parameterMarker="@" quote="&quot;">
+  <table name="tbl_dwgGen_RequestQueue" schema="dbo">
+    <columns>
+      <column name="requestID" type="int" allowNulls="false" identity="true" readOnly="true" dataType="Int32" />
+      <column name="requesterUserName" type="varchar" length="100" allowNulls="false" dataType="String" />
+      <column name="requesterCompany" type="nvarchar" length="100" dataType="String" />
+      <column name="requesterEmail" type="varchar" length="100" dataType="String" />
+      <column name="SalesRepName" type="nvarchar" length="100" dataType="String" />
+      <column name="SalesRepCompany" type="nvarchar" length="100" dataType="String" />
+      <column name="SalesRepEmail" type="nvarchar" length="100" dataType="String" />
+      <column name="DrawingFormat" type="nvarchar" length="70" dataType="String" />
+      <column name="masterJSON" type="nvarchar" onDemand="true" dataType="String" />
+      <column name="statusID" type="int" dataType="Int32" />
+      <column name="fileNameBase" type="nvarchar" length="100" dataType="String" />
+      <column name="jobRequestType" type="nvarchar" length="100" dataType="String" />
+      <column name="salesOrderNumber" type="nvarchar" length="100" dataType="String" />
+      <column name="quoteNumber" type="nvarchar" length="100" dataType="String" />
+      <column name="projectName" type="nvarchar" length="100" dataType="String" />
+      <column name="customerName" type="nvarchar" length="100" dataType="String" />
+      <column name="dateAddedToQueue" type="datetime" dataType="DateTime" />
+      <column name="DWGGenServerName" type="varchar" length="200" dataType="String" />
+      <column name="dateDWGGenStarted" type="datetime" dataType="DateTime" />
+      <column name="dateDWGGenAllCompleted" type="datetime" dataType="DateTime" />
+      <column name="dateSAPFirstFileReceived" type="datetime" dataType="DateTime" />
+      <column name="dateSAPFileAllCompleted" type="datetime" dataType="DateTime" />
+      <column name="dateEmailSent" type="datetime" dataType="DateTime" />
+      <column name="dateDWGGenFailed" type="datetime" dataType="DateTime" />
+      <column name="SourceID" type="int" dataType="Int32" />
+      <column name="dateTactonUploadStarted" type="datetime" dataType="DateTime" />
+      <column name="dateTactonUploadCompleted" type="datetime" dataType="DateTime" />
+      <column name="dateTactonUploadFailed" type="datetime" dataType="DateTime" />
+      <column name="tactonConfiguredProductId" type="nvarchar" length="100" dataType="String" />
+      <column name="tactonConfiguredProductStrong" type="nvarchar" length="100" dataType="String" />
+      <column name="tactonSolutionId" type="nvarchar" length="100" dataType="String" />
+      <column name="tactonDrawingId" type="nvarchar" length="100" dataType="String" />
+      <column name="tactonWorkflowStateID" type="nvarchar" length="10" dataType="String" />
+      <column name="tactonTransitionStatus" type="varchar" length="20" dataType="String" />
+      <column name="tactonTicketNo" type="nvarchar" length="100" dataType="String" />
+    </columns>
+    <primaryKey />
+    <foreignKeys />
+  </table>
+  <table name="tbl_Log_Activity" schema="dbo">
+    <columns>
+      <column name="ActivityID" type="int" allowNulls="false" identity="true" readOnly="true" dataType="Int32" />
+      <column name="AppName" type="varchar" length="100" dataType="String" />
+      <column name="ActivityUser" type="varchar" length="100" dataType="String" />
+      <column name="ActivityDate" type="datetime" dataType="DateTime" />
+      <column name="ActivityType" type="varchar" length="20" dataType="String" />
+      <column name="ActivityDetails" type="varchar" length="1000" dataType="String" />
+      <column name="OrginServer" type="varchar" length="100" dataType="String" />
+      <column name="QueueRequestID" type="int" dataType="Int32" />
+    </columns>
+    <primaryKey />
+    <foreignKeys />
+  </table>
+  <table name="tbl_Log_Email" schema="dbo">
+    <columns>
+      <column name="emailLogID" type="int" allowNulls="false" identity="true" readOnly="true" dataType="Int32" />
+      <column name="AppName" type="varchar" length="100" dataType="String" />
+      <column name="emailFrom" type="varchar" length="100" dataType="String" />
+      <column name="emailTo" type="varchar" length="2000" onDemand="true" dataType="String" />
+      <column name="emailCC" type="varchar" length="2000" onDemand="true" dataType="String" />
+      <column name="emailBCC" type="varchar" length="500" dataType="String" />
+      <column name="emailSubject" type="varchar" length="500" dataType="String" />
+      <column name="emailBody" type="nvarchar" onDemand="true" dataType="String" />
+      <column name="emailSentDate" type="datetime" dataType="DateTime" />
+      <column name="emailHost" type="varchar" length="100" dataType="String" />
+    </columns>
+    <primaryKey />
+    <foreignKeys />
+  </table>
+  <table name="vw_Dashboard_Order" schema="dbo">
+    <columns>
+      <column name="requestID" type="int" allowNulls="false" identity="true" readOnly="true" dataType="Int32" />
+      <column name="ReceivedDate" type="date" readOnly="true" computed="true" dataType="DateTime" />
+      <column name="RequesterCompany" type="nvarchar" length="100" allowNulls="false" readOnly="true" computed="true" dataType="String" />
+      <column name="Requester" type="varchar" length="100" allowNulls="false" dataType="String" />
+      <column name="Status" type="varchar" length="11" allowNulls="false" readOnly="true" computed="true" dataType="String" />
+    </columns>
+  </table>
+  <table name="vw_Dashboard_Quote" schema="dbo">
+    <columns>
+      <column name="requestID" type="int" allowNulls="false" identity="true" readOnly="true" dataType="Int32" />
+      <column name="ReceivedDate" type="date" readOnly="true" computed="true" dataType="DateTime" />
+      <column name="RequesterCompany" type="nvarchar" length="100" allowNulls="false" readOnly="true" computed="true" dataType="String" />
+      <column name="Requester" type="varchar" length="100" allowNulls="false" dataType="String" />
+      <column name="Status" type="varchar" length="11" allowNulls="false" readOnly="true" computed="true" dataType="String" />
+    </columns>
+  </table>
+</dataModel>

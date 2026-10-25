@@ -1,0 +1,1095 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logs>
+  <log type="Controllers">
+    <c y="NodeSet" t="2026-10-24T08:44:47.9303512Z">
+      <controller name="VwDashboardOrder" />
+      <field name="RequestID" />
+      <update>
+        <IsPrimaryKey>true</IsPrimaryKey>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-24T08:45:03.2455887Z">
+      <controller name="VwDashboardQuote" />
+      <field name="RequestID" />
+      <update>
+        <IsPrimaryKey>true</IsPrimaryKey>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-24T09:02:15.3040190Z">
+      <controller name="VwDashboardOrder" />
+      <insert type="view">
+        <ViewId>chartCompany</ViewId>
+        <Type>Chart</Type>
+        <Legend>false</Legend>
+        <Label>Requester Company</Label>
+        <ShowInSelector>true</ShowInSelector>
+        <ReportTemplate>false</ReportTemplate>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-24T09:03:19.1804365Z">
+      <controller name="VwDashboardOrder" />
+      <insert type="view">
+        <ViewId>chartRequester</ViewId>
+        <Type>Chart</Type>
+        <Legend>false</Legend>
+        <Label>Requester</Label>
+        <ShowInSelector>true</ShowInSelector>
+        <ReportTemplate>false</ReportTemplate>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-24T09:03:51.9186005Z">
+      <controller name="VwDashboardOrder" />
+      <insert type="view">
+        <ViewId>chartStatus</ViewId>
+        <Type>Chart</Type>
+        <Legend>false</Legend>
+        <Label>Status</Label>
+        <ShowInSelector>true</ShowInSelector>
+        <ReportTemplate>false</ReportTemplate>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-24T09:04:44.5655503Z">
+      <controller name="VwDashboardQuote" />
+      <insert type="view">
+        <ViewId>chartCompany</ViewId>
+        <Type>Chart</Type>
+        <Legend>false</Legend>
+        <Label>Requester Company</Label>
+        <ShowInSelector>true</ShowInSelector>
+        <ReportTemplate>false</ReportTemplate>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-24T09:05:13.0543309Z">
+      <controller name="VwDashboardQuote" />
+      <insert type="view">
+        <ViewId>chartRequester</ViewId>
+        <Type>Chart</Type>
+        <Legend>false</Legend>
+        <Label>Requester</Label>
+        <ShowInSelector>true</ShowInSelector>
+        <ReportTemplate>false</ReportTemplate>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-24T09:05:38.8604055Z">
+      <controller name="VwDashboardQuote" />
+      <insert type="view">
+        <ViewId>chartStatus</ViewId>
+        <Type>Chart</Type>
+        <Legend>false</Legend>
+        <Label>Status</Label>
+        <ShowInSelector>true</ShowInSelector>
+        <ReportTemplate>false</ReportTemplate>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-24T09:06:20.8045367Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <copy>
+        <controller name="VwDashboardOrder" />
+        <view id="grid1" />
+        <dataField fieldName="RequestID" />
+      </copy>
+    </c>
+    <c y="NodeSet" t="2026-10-24T09:06:50.7159595Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <copy>
+        <controller name="VwDashboardOrder" />
+        <view id="grid1" />
+        <dataField fieldName="ReceivedDate" />
+      </copy>
+    </c>
+    <c y="NodeSet" t="2026-10-24T10:37:36.8901884Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <copy>
+        <controller name="VwDashboardOrder" />
+        <view id="grid1" />
+        <dataField fieldName="RequesterCompany" />
+      </copy>
+    </c>
+    <c y="NodeSet" t="2026-10-24T10:39:12.4687334Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartRequester" />
+      <copy>
+        <controller name="VwDashboardOrder" />
+        <view id="chartCompany" />
+        <dataField fieldName="RequestID" />
+      </copy>
+    </c>
+    <c y="NodeSet" t="2026-10-24T10:39:12.4810720Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartRequester" />
+      <copy>
+        <controller name="VwDashboardOrder" />
+        <view id="chartCompany" />
+        <dataField fieldName="ReceivedDate" />
+      </copy>
+    </c>
+    <c y="NodeSet" t="2026-10-24T10:39:22.0862350Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartRequester" />
+      <copy>
+        <controller name="VwDashboardOrder" />
+        <view id="chartCompany" />
+        <dataField fieldName="RequesterCompany" />
+      </copy>
+    </c>
+    <c y="NodeSet" t="2026-10-24T10:39:30.2690857Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartRequester" />
+      <copy>
+        <controller name="VwDashboardOrder" />
+        <view id="grid1" />
+        <dataField fieldName="Requester" />
+      </copy>
+    </c>
+    <c y="NodeSet" t="2026-10-24T10:41:03.0923656Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartStatus" />
+      <copy>
+        <controller name="VwDashboardOrder" />
+        <view id="grid1" />
+        <dataField fieldName="Status" />
+      </copy>
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:08:22.4553179Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartRequester" />
+      <dataField fieldName="RequesterCompany" />
+      <delete />
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:13:44.6540838Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartCompany" />
+      <copy>
+        <controller name="VwDashboardQuote" />
+        <view id="grid1" />
+        <dataField fieldName="RequestID" />
+      </copy>
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:13:44.6540838Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartCompany" />
+      <copy>
+        <controller name="VwDashboardQuote" />
+        <view id="grid1" />
+        <dataField fieldName="ReceivedDate" />
+      </copy>
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:13:56.1904541Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartCompany" />
+      <copy>
+        <controller name="VwDashboardQuote" />
+        <view id="grid1" />
+        <dataField fieldName="RequesterCompany" />
+      </copy>
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:14:14.8917098Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartRequester" />
+      <copy>
+        <controller name="VwDashboardQuote" />
+        <view id="grid1" />
+        <dataField fieldName="RequestID" />
+      </copy>
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:14:23.0001907Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartRequester" />
+      <copy>
+        <controller name="VwDashboardQuote" />
+        <view id="grid1" />
+        <dataField fieldName="ReceivedDate" />
+      </copy>
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:14:32.6894070Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartRequester" />
+      <copy>
+        <controller name="VwDashboardQuote" />
+        <view id="grid1" />
+        <dataField fieldName="Requester" />
+      </copy>
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:14:50.9768972Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartStatus" />
+      <copy>
+        <controller name="VwDashboardQuote" />
+        <view id="grid1" />
+        <dataField fieldName="Status" />
+      </copy>
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:15:12.5690444Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartStatus" />
+      <copy>
+        <controller name="VwDashboardQuote" />
+        <view id="grid1" />
+        <dataField fieldName="RequestID" />
+      </copy>
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:15:21.4741425Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartStatus" />
+      <copy>
+        <controller name="VwDashboardOrder" />
+        <view id="grid1" />
+        <dataField fieldName="RequestID" />
+      </copy>
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:21:11.4748232Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <dataField fieldName="RequestID" />
+      <delete />
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:21:58.0073807Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <insert type="dataField">
+        <FieldName>RequestID</FieldName>
+        <TextMode>Text</TextMode>
+        <Hidden>false</Hidden>
+        <Aggregate>Count</Aggregate>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+        <DataViewShowActionBar>true</DataViewShowActionBar>
+        <DataViewShowDescription>true</DataViewShowDescription>
+        <DataViewShowViewSelector>true</DataViewShowViewSelector>
+        <DataViewShowSearchBar>true</DataViewShowSearchBar>
+        <DataViewShowQuickFind>true</DataViewShowQuickFind>
+        <DataViewShowRowNumber>false</DataViewShowRowNumber>
+        <DataViewShowPageSize>true</DataViewShowPageSize>
+        <DataViewShowModalForms>false</DataViewShowModalForms>
+        <DataViewSearchOnStart>false</DataViewSearchOnStart>
+        <DataViewAutoSelectFirstRow>false</DataViewAutoSelectFirstRow>
+        <DataViewAutoHighlightFirstRow>false</DataViewAutoHighlightFirstRow>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:22:21.7411996Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartCompany" />
+      <dataField fieldName="RequestID" />
+      <update>
+        <Hidden>false</Hidden>
+        <Aggregate>Count</Aggregate>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:23:23.0529321Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartCompany" />
+      <dataField fieldName="ReceivedDate" />
+      <delete />
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:24:44.8582188Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartCompany" />
+      <insert type="dataField">
+        <FieldName>ReceivedDate</FieldName>
+        <TextMode>Text</TextMode>
+        <Hidden>false</Hidden>
+        <Chart>XValue</Chart>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+        <DataViewShowActionBar>true</DataViewShowActionBar>
+        <DataViewShowDescription>true</DataViewShowDescription>
+        <DataViewShowViewSelector>true</DataViewShowViewSelector>
+        <DataViewShowSearchBar>true</DataViewShowSearchBar>
+        <DataViewShowQuickFind>true</DataViewShowQuickFind>
+        <DataViewShowRowNumber>false</DataViewShowRowNumber>
+        <DataViewShowPageSize>true</DataViewShowPageSize>
+        <DataViewShowModalForms>false</DataViewShowModalForms>
+        <DataViewSearchOnStart>false</DataViewSearchOnStart>
+        <DataViewAutoSelectFirstRow>false</DataViewAutoSelectFirstRow>
+        <DataViewAutoHighlightFirstRow>false</DataViewAutoHighlightFirstRow>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:25:15.5609792Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartCompany" />
+      <move>
+        <controller name="VwDashboardQuote" />
+        <view id="chartCompany" />
+        <dataField fieldName="ReceivedDate" />
+      </move>
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:25:18.7846216Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartCompany" />
+      <dataField fieldName="ReceivedDate" />
+      <move>
+        <controller name="VwDashboardQuote" />
+        <view id="chartCompany" />
+        <dataField fieldName="RequestID" />
+      </move>
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:25:26.5516267Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartCompany" />
+      <dataField fieldName="RequestID" />
+      <move>
+        <controller name="VwDashboardQuote" />
+        <view id="chartCompany" />
+        <dataField fieldName="RequesterCompany" />
+      </move>
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:25:33.6370965Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartCompany" />
+      <dataField fieldName="RequesterCompany" />
+      <update>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:35:04.7354246Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartStatus" />
+      <dataField fieldName="RequestID" />
+      <update>
+        <Hidden>false</Hidden>
+        <Aggregate>Count</Aggregate>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:35:19.3606707Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartStatus" />
+      <dataField fieldName="RequestID" />
+      <update>
+        <Hidden>false</Hidden>
+        <Aggregate>Count</Aggregate>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:41:02.2634051Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartCompany" />
+      <dataField fieldName="ReceivedDate" />
+      <update>
+        <Tag>pivot1-row1-day-columnstacked</Tag>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:41:17.2577519Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <dataField fieldName="ReceivedDate" />
+      <update>
+        <Tag>pivot1-row1-day-columnstacked</Tag>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:41:44.9907701Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <dataField fieldName="RequesterCompany" />
+      <update>
+        <Tag>pivot1-col1</Tag>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:41:57.1825363Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartCompany" />
+      <dataField fieldName="RequesterCompany" />
+      <update>
+        <Tag>pivot1-col1</Tag>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:42:19.3488463Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartRequester" />
+      <dataField fieldName="ReceivedDate" />
+      <update>
+        <Tag>pivot1-row1-day-columnstacked</Tag>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:42:35.6577515Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartRequester" />
+      <dataField fieldName="ReceivedDate" />
+      <update>
+        <Tag>pivot1-row1-day-columnstacked</Tag>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:42:56.8121243Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartRequester" />
+      <dataField fieldName="Requester" />
+      <update>
+        <Tag>pivot1-col1</Tag>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:43:07.1941853Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartRequester" />
+      <dataField fieldName="Requester" />
+      <update>
+        <Tag>pivot1-col1</Tag>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:43:28.5369138Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartStatus" />
+      <dataField fieldName="Status" />
+      <update>
+        <Tag>pivot1-row1-donut</Tag>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T06:43:37.0811202Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartStatus" />
+      <dataField fieldName="Status" />
+      <update>
+        <Tag>pivot1-row1-donut</Tag>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T16:59:10.0975595Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartRequester" />
+      <delete />
+    </c>
+    <c y="NodeSet" t="2026-10-25T16:59:17.4573109Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartStatus" />
+      <delete />
+    </c>
+    <c y="NodeSet" t="2026-10-25T17:00:02.2072553Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartRequester" />
+      <delete />
+    </c>
+    <c y="NodeSet" t="2026-10-25T17:00:12.6234002Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartStatus" />
+      <delete />
+    </c>
+    <c y="NodeSet" t="2026-10-25T17:01:52.6314603Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <insert type="dataField">
+        <FieldName>Requester</FieldName>
+        <TextMode>Text</TextMode>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+        <DataViewShowActionBar>true</DataViewShowActionBar>
+        <DataViewShowDescription>true</DataViewShowDescription>
+        <DataViewShowViewSelector>true</DataViewShowViewSelector>
+        <DataViewShowSearchBar>true</DataViewShowSearchBar>
+        <DataViewShowQuickFind>true</DataViewShowQuickFind>
+        <DataViewShowRowNumber>false</DataViewShowRowNumber>
+        <DataViewShowPageSize>true</DataViewShowPageSize>
+        <DataViewShowModalForms>false</DataViewShowModalForms>
+        <DataViewSearchOnStart>false</DataViewSearchOnStart>
+        <DataViewAutoSelectFirstRow>false</DataViewAutoSelectFirstRow>
+        <DataViewAutoHighlightFirstRow>false</DataViewAutoHighlightFirstRow>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-25T17:02:24.9591296Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <insert type="dataField">
+        <FieldName>Status</FieldName>
+        <TextMode>Text</TextMode>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+        <DataViewShowActionBar>true</DataViewShowActionBar>
+        <DataViewShowDescription>true</DataViewShowDescription>
+        <DataViewShowViewSelector>true</DataViewShowViewSelector>
+        <DataViewShowSearchBar>true</DataViewShowSearchBar>
+        <DataViewShowQuickFind>true</DataViewShowQuickFind>
+        <DataViewShowRowNumber>false</DataViewShowRowNumber>
+        <DataViewShowPageSize>true</DataViewShowPageSize>
+        <DataViewShowModalForms>false</DataViewShowModalForms>
+        <DataViewSearchOnStart>false</DataViewSearchOnStart>
+        <DataViewAutoSelectFirstRow>false</DataViewAutoSelectFirstRow>
+        <DataViewAutoHighlightFirstRow>false</DataViewAutoHighlightFirstRow>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-25T17:04:13.8064778Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <dataField fieldName="Status" />
+      <update>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T17:17:51.8400971Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <dataField fieldName="ReceivedDate" />
+      <update>
+        <Tag>pivot1-row1-date-columnstacked pivot2-row1-date-columnstacked</Tag>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T17:20:39.9461269Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <dataField fieldName="Requester" />
+      <update>
+        <Tag>pivot2-col1</Tag>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T17:21:01.6488322Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <dataField fieldName="Status" />
+      <update>
+        <Tag>pivot3-row1-donut</Tag>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T17:21:51.3959953Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartCompany" />
+      <dataField fieldName="ReceivedDate" />
+      <update>
+        <Tag>pivot1-row1-date-columnstacked pivot2-row1-date-columnstacked</Tag>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T17:21:59.9805631Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartCompany" />
+      <dataField fieldName="ReceivedDate" />
+      <update>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T17:34:16.6041173Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartCompany" />
+      <dataField fieldName="ReceivedDate" />
+      <update>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T17:35:04.6672905Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartCompany" />
+      <insert type="dataField">
+        <FieldName>Requester</FieldName>
+        <TextMode>Text</TextMode>
+        <Tag>pivot2-col1</Tag>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+        <DataViewShowActionBar>true</DataViewShowActionBar>
+        <DataViewShowDescription>true</DataViewShowDescription>
+        <DataViewShowViewSelector>true</DataViewShowViewSelector>
+        <DataViewShowSearchBar>true</DataViewShowSearchBar>
+        <DataViewShowQuickFind>true</DataViewShowQuickFind>
+        <DataViewShowRowNumber>false</DataViewShowRowNumber>
+        <DataViewShowPageSize>true</DataViewShowPageSize>
+        <DataViewShowModalForms>false</DataViewShowModalForms>
+        <DataViewSearchOnStart>false</DataViewSearchOnStart>
+        <DataViewAutoSelectFirstRow>false</DataViewAutoSelectFirstRow>
+        <DataViewAutoHighlightFirstRow>false</DataViewAutoHighlightFirstRow>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-25T17:35:45.7821303Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartCompany" />
+      <insert type="dataField">
+        <FieldName>Status</FieldName>
+        <TextMode>Text</TextMode>
+        <Tag>pivot3-row1-donut</Tag>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+        <DataViewShowActionBar>true</DataViewShowActionBar>
+        <DataViewShowDescription>true</DataViewShowDescription>
+        <DataViewShowViewSelector>true</DataViewShowViewSelector>
+        <DataViewShowSearchBar>true</DataViewShowSearchBar>
+        <DataViewShowQuickFind>true</DataViewShowQuickFind>
+        <DataViewShowRowNumber>false</DataViewShowRowNumber>
+        <DataViewShowPageSize>true</DataViewShowPageSize>
+        <DataViewShowModalForms>false</DataViewShowModalForms>
+        <DataViewSearchOnStart>false</DataViewSearchOnStart>
+        <DataViewAutoSelectFirstRow>false</DataViewAutoSelectFirstRow>
+        <DataViewAutoHighlightFirstRow>false</DataViewAutoHighlightFirstRow>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-25T17:37:48.5657699Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartCompany" />
+      <dataField fieldName="Status" />
+      <update>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T19:02:59.8993516Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <dataField fieldName="ReceivedDate" />
+      <update>
+        <Tag />
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T19:03:07.7009881Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <dataField fieldName="RequesterCompany" />
+      <update>
+        <Tag />
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T19:03:27.5869317Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <dataField fieldName="Requester" />
+      <update>
+        <Tag />
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T19:03:35.2299757Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <dataField fieldName="Status" />
+      <update>
+        <Tag />
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T19:05:25.2429115Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <dataField fieldName="ReceivedDate" />
+      <update>
+        <Tag>pivot1-row1-date-columnstacked pivot2-row1-date-columnstacked</Tag>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T19:05:42.6413982Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <dataField fieldName="RequesterCompany" />
+      <update>
+        <Tag>pivot1-col1</Tag>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T19:06:01.9319977Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <dataField fieldName="Requester" />
+      <update>
+        <Tag>pivot2-col1</Tag>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T19:06:17.8310287Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <dataField fieldName="Status" />
+      <update>
+        <Tag>pivot3-row1-donut</Tag>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T19:07:24.4851365Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <dataField fieldName="Status" />
+      <update>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T19:34:35.6493842Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <dataField fieldName="ReceivedDate" />
+      <update>
+        <Tag />
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T19:34:43.3793061Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <dataField fieldName="RequesterCompany" />
+      <update>
+        <Tag />
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T19:34:54.7046601Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <dataField fieldName="Requester" />
+      <update>
+        <Tag />
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T19:35:02.4410956Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <dataField fieldName="Status" />
+      <update>
+        <Tag />
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T19:35:51.2449932Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <dataField fieldName="Status" />
+      <update>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T19:38:15.3273383Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <dataField fieldName="Status" />
+      <update>
+        <Tag>pivot3-row1-donut</Tag>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T19:38:51.3458744Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <dataField fieldName="Requester" />
+      <update>
+        <Tag>pivot2-col1</Tag>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T19:39:05.9008006Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <dataField fieldName="RequesterCompany" />
+      <update>
+        <Tag>pivot1-col1</Tag>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T19:39:20.3692712Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <dataField fieldName="ReceivedDate" />
+      <update>
+        <Tag>pivot1-row1-date-columnstacked pivot2-row1-date-columnstacked</Tag>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+  </log>
+  <log type="Application">
+    <c y="NodeSet" t="2026-10-25T08:55:09.5499724Z">
+      <page name="Home" />
+      <container id="container2" />
+      <delete />
+    </c>
+    <c y="NodeSet" t="2026-10-25T08:56:33.5802183Z">
+      <page name="Home" />
+      <insert type="container">
+        <Flow>NewRow</Flow>
+        <Width>33%</Width>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-25T08:57:13.4809514Z">
+      <page name="Home" />
+      <insert type="container">
+        <Flow>NewColumn</Flow>
+        <Width>33%</Width>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-25T08:58:45.4398621Z">
+      <page name="Home" />
+      <insert type="container">
+        <ContainerId>c102</ContainerId>
+        <Flow>NewColumn</Flow>
+        <Width>33%</Width>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-25T08:59:23.5611444Z">
+      <page name="Home" />
+      <insert type="container">
+        <Flow>NewRow</Flow>
+        <Width>33%</Width>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-25T08:59:43.6150630Z">
+      <page name="Home" />
+      <insert type="container">
+        <Flow>NewColumn</Flow>
+        <Width>33%</Width>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-25T09:00:00.6462070Z">
+      <page name="Home" />
+      <insert type="container">
+        <Flow>NewColumn</Flow>
+        <Width>33%</Width>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-25T09:08:23.0903838Z">
+      <page name="Home" />
+      <container id="c101" />
+      <insert type="dataView">
+        <Controller>VwDashboardOrder</Controller>
+        <View>chartCompany</View>
+        <ShowInSummary>false</ShowInSummary>
+        <MultiSelect>false</MultiSelect>
+        <ShowActionBar>true</ShowActionBar>
+        <ShowDescription>true</ShowDescription>
+        <ShowViewSelector>true</ShowViewSelector>
+        <ShowSearchBar>true</ShowSearchBar>
+        <ShowQuickFind>true</ShowQuickFind>
+        <SearchByFirstLetter>false</SearchByFirstLetter>
+        <ShowRowNumber>false</ShowRowNumber>
+        <ShowPager>Bottom</ShowPager>
+        <ShowPageSize>true</ShowPageSize>
+        <ShowModalForms>false</ShowModalForms>
+        <SearchOnStart>false</SearchOnStart>
+        <ShowDetailsInListMode>true</ShowDetailsInListMode>
+        <AutoHighlightFirstRow>false</AutoHighlightFirstRow>
+        <AutoSelectFirstRow>false</AutoSelectFirstRow>
+        <AutoHide>Nothing</AutoHide>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-25T09:08:53.3752296Z">
+      <page name="Home" />
+      <container id="c102" />
+      <insert type="dataView">
+        <Controller>VwDashboardOrder</Controller>
+        <View>chartRequester</View>
+        <ShowInSummary>false</ShowInSummary>
+        <MultiSelect>false</MultiSelect>
+        <ShowActionBar>true</ShowActionBar>
+        <ShowDescription>true</ShowDescription>
+        <ShowViewSelector>true</ShowViewSelector>
+        <ShowSearchBar>true</ShowSearchBar>
+        <ShowQuickFind>true</ShowQuickFind>
+        <SearchByFirstLetter>false</SearchByFirstLetter>
+        <ShowRowNumber>false</ShowRowNumber>
+        <ShowPager>Bottom</ShowPager>
+        <ShowPageSize>true</ShowPageSize>
+        <ShowModalForms>false</ShowModalForms>
+        <SearchOnStart>false</SearchOnStart>
+        <ShowDetailsInListMode>true</ShowDetailsInListMode>
+        <AutoHighlightFirstRow>false</AutoHighlightFirstRow>
+        <AutoSelectFirstRow>false</AutoSelectFirstRow>
+        <AutoHide>Nothing</AutoHide>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-25T09:09:12.1463928Z">
+      <page name="Home" />
+      <container id="c103" />
+      <insert type="dataView">
+        <Controller>VwDashboardOrder</Controller>
+        <View>chartStatus</View>
+        <ShowInSummary>false</ShowInSummary>
+        <MultiSelect>false</MultiSelect>
+        <ShowActionBar>true</ShowActionBar>
+        <ShowDescription>true</ShowDescription>
+        <ShowViewSelector>true</ShowViewSelector>
+        <ShowSearchBar>true</ShowSearchBar>
+        <ShowQuickFind>true</ShowQuickFind>
+        <SearchByFirstLetter>false</SearchByFirstLetter>
+        <ShowRowNumber>false</ShowRowNumber>
+        <ShowPager>Bottom</ShowPager>
+        <ShowPageSize>true</ShowPageSize>
+        <ShowModalForms>false</ShowModalForms>
+        <SearchOnStart>false</SearchOnStart>
+        <ShowDetailsInListMode>true</ShowDetailsInListMode>
+        <AutoHighlightFirstRow>false</AutoHighlightFirstRow>
+        <AutoSelectFirstRow>false</AutoSelectFirstRow>
+        <AutoHide>Nothing</AutoHide>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-25T09:09:29.5191705Z">
+      <page name="Home" />
+      <container id="c104" />
+      <insert type="dataView">
+        <Controller>VwDashboardQuote</Controller>
+        <View>chartCompany</View>
+        <ShowInSummary>false</ShowInSummary>
+        <MultiSelect>false</MultiSelect>
+        <ShowActionBar>true</ShowActionBar>
+        <ShowDescription>true</ShowDescription>
+        <ShowViewSelector>true</ShowViewSelector>
+        <ShowSearchBar>true</ShowSearchBar>
+        <ShowQuickFind>true</ShowQuickFind>
+        <SearchByFirstLetter>false</SearchByFirstLetter>
+        <ShowRowNumber>false</ShowRowNumber>
+        <ShowPager>Bottom</ShowPager>
+        <ShowPageSize>true</ShowPageSize>
+        <ShowModalForms>false</ShowModalForms>
+        <SearchOnStart>false</SearchOnStart>
+        <ShowDetailsInListMode>true</ShowDetailsInListMode>
+        <AutoHighlightFirstRow>false</AutoHighlightFirstRow>
+        <AutoSelectFirstRow>false</AutoSelectFirstRow>
+        <AutoHide>Nothing</AutoHide>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-25T09:12:44.7154757Z">
+      <page name="Home" />
+      <container id="c105" />
+      <insert type="dataView">
+        <Controller>VwDashboardQuote</Controller>
+        <View>chartRequester</View>
+        <ShowInSummary>false</ShowInSummary>
+        <MultiSelect>false</MultiSelect>
+        <ShowActionBar>true</ShowActionBar>
+        <ShowDescription>true</ShowDescription>
+        <ShowViewSelector>true</ShowViewSelector>
+        <ShowSearchBar>true</ShowSearchBar>
+        <ShowQuickFind>true</ShowQuickFind>
+        <SearchByFirstLetter>false</SearchByFirstLetter>
+        <ShowRowNumber>false</ShowRowNumber>
+        <ShowPager>Bottom</ShowPager>
+        <ShowPageSize>true</ShowPageSize>
+        <ShowModalForms>false</ShowModalForms>
+        <SearchOnStart>false</SearchOnStart>
+        <ShowDetailsInListMode>true</ShowDetailsInListMode>
+        <AutoHighlightFirstRow>false</AutoHighlightFirstRow>
+        <AutoSelectFirstRow>false</AutoSelectFirstRow>
+        <AutoHide>Nothing</AutoHide>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-25T09:13:13.8136640Z">
+      <page name="Home" />
+      <container id="c106" />
+      <insert type="dataView">
+        <Controller>VwDashboardQuote</Controller>
+        <View>chartStatus</View>
+        <ShowInSummary>false</ShowInSummary>
+        <MultiSelect>false</MultiSelect>
+        <ShowActionBar>true</ShowActionBar>
+        <ShowDescription>true</ShowDescription>
+        <ShowViewSelector>true</ShowViewSelector>
+        <ShowSearchBar>true</ShowSearchBar>
+        <ShowQuickFind>true</ShowQuickFind>
+        <SearchByFirstLetter>false</SearchByFirstLetter>
+        <ShowRowNumber>false</ShowRowNumber>
+        <ShowPager>Bottom</ShowPager>
+        <ShowPageSize>true</ShowPageSize>
+        <ShowModalForms>false</ShowModalForms>
+        <SearchOnStart>false</SearchOnStart>
+        <ShowDetailsInListMode>true</ShowDetailsInListMode>
+        <AutoHighlightFirstRow>false</AutoHighlightFirstRow>
+        <AutoSelectFirstRow>false</AutoSelectFirstRow>
+        <AutoHide>Nothing</AutoHide>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-25T14:42:15.6633139Z">
+      <page name="Home" />
+      <container id="c102" />
+      <delete />
+    </c>
+    <c y="NodeSet" t="2026-10-25T14:43:06.0514838Z">
+      <page name="Home" />
+      <container id="c103" />
+      <delete />
+    </c>
+    <c y="NodeSet" t="2026-10-25T14:43:18.5260464Z">
+      <page name="Home" />
+      <container id="c105" />
+      <delete />
+    </c>
+    <c y="NodeSet" t="2026-10-25T14:43:24.4372569Z">
+      <page name="Home" />
+      <container id="c106" />
+      <delete />
+    </c>
+    <c y="NodeSet" t="2026-10-25T16:54:21.6070480Z">
+      <page name="Home" />
+      <container id="c104" />
+      <delete />
+    </c>
+    <c y="NodeSet" t="2026-10-25T17:48:59.9919294Z">
+      <page name="Home" />
+      <container id="c101" />
+      <update>
+        <Width>100%</Width>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T17:50:31.5484674Z">
+      <page name="Home" />
+      <dataView id="view1" />
+      <update>
+        <Activator>Tab</Activator>
+        <Text>Order Drawing</Text>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-25T17:51:50.6209460Z">
+      <page name="Home" />
+      <container id="c101" />
+      <insert type="dataView">
+        <Controller>VwDashboardQuote</Controller>
+        <View>chartCompany</View>
+        <Activator>Tab</Activator>
+        <Text>Quote Drawing</Text>
+        <ShowInSummary>false</ShowInSummary>
+        <MultiSelect>false</MultiSelect>
+        <ShowActionBar>true</ShowActionBar>
+        <ShowDescription>true</ShowDescription>
+        <ShowViewSelector>true</ShowViewSelector>
+        <ShowSearchBar>true</ShowSearchBar>
+        <ShowQuickFind>true</ShowQuickFind>
+        <SearchByFirstLetter>false</SearchByFirstLetter>
+        <ShowRowNumber>false</ShowRowNumber>
+        <ShowPager>Bottom</ShowPager>
+        <ShowPageSize>true</ShowPageSize>
+        <ShowModalForms>false</ShowModalForms>
+        <SearchOnStart>false</SearchOnStart>
+        <ShowDetailsInListMode>true</ShowDetailsInListMode>
+        <AutoHighlightFirstRow>false</AutoHighlightFirstRow>
+        <AutoSelectFirstRow>false</AutoSelectFirstRow>
+        <AutoHide>Nothing</AutoHide>
+      </insert>
+    </c>
+  </log>
+</logs>

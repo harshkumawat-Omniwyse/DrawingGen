@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="tbl_Log_Email" alias="tbl_Log_Email" created="2026-10-23T14:51:42" modified="2026-10-23T14:51:44" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="emailLogID" fieldName="EmailLogID" label="email Log ID" />
+    <column name="AppName" fieldName="AppName" label="App Name" />
+    <column name="emailFrom" fieldName="EmailFrom" label="email From" />
+    <column name="emailTo" fieldName="EmailTo" label="email To" />
+    <column name="emailCC" fieldName="EmailCc" label="email CC" />
+    <column name="emailBCC" fieldName="EmailBcc" label="email BCC" />
+    <column name="emailSubject" fieldName="EmailSubject" label="email Subject" />
+    <column name="emailBody" fieldName="EmailBody" label="email Body" />
+    <column name="emailSentDate" fieldName="EmailSentDate" label="email Sent Date" format="g" />
+    <column name="emailHost" fieldName="EmailHost" label="email Host" />
+  </columns>
+</dataModel>

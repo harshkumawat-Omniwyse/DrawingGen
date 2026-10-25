@@ -1,0 +1,14 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 18
+
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "DrawingGen", "app\", "6676445E-9133-4F1A-99F2-394788F85403"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Code On Time Items", "Code On Time Items", "{44998A53-AAE3-4565-ACC3-267141068E9B}"
+	ProjectSection(SolutionItems) = preProject
+		ClientLibrary.en-US.txt = ClientLibrary.en-US.txt
+		DataAquarium.Project.xml = DataAquarium.Project.xml
+		DataAquarium.Version.xml = DataAquarium.Version.xml
+		Sync.DESKTOP-65CDBH8-OMNIADMIN.xml = Sync.DESKTOP-65CDBH8-OMNIADMIN.xml
+	EndProjectSection
+EndProject

@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="tbl_dwgGen_RequestQueue" alias="tbl_dwgGen_RequestQueue" created="2026-10-23T14:51:32" modified="2026-10-23T14:51:35" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="requestID" fieldName="RequestID" label="request ID" />
+    <column name="requesterUserName" fieldName="RequesterUserName" label="requester User Name" />
+    <column name="requesterCompany" fieldName="RequesterCompany" label="requester Company" />
+    <column name="requesterEmail" fieldName="RequesterEmail" label="requester Email" />
+    <column name="SalesRepName" fieldName="SalesRepName" label="Sales Rep Name" />
+    <column name="SalesRepCompany" fieldName="SalesRepCompany" label="Sales Rep Company" />
+    <column name="SalesRepEmail" fieldName="SalesRepEmail" label="Sales Rep Email" />
+    <column name="DrawingFormat" fieldName="DrawingFormat" label="Drawing Format" />
+    <column name="masterJSON" fieldName="MasterJson" label="master JSON" />
+    <column name="statusID" fieldName="StatusID" label="status ID" />
+    <column name="fileNameBase" fieldName="FileNameBase" label="file Name Base" />
+    <column name="jobRequestType" fieldName="JobRequestType" label="job Request Type" />
+    <column name="salesOrderNumber" fieldName="SalesOrderNumber" label="sales Order Number" />
+    <column name="quoteNumber" fieldName="QuoteNumber" label="quote Number" />
+    <column name="projectName" fieldName="ProjectName" label="project Name" />
+    <column name="customerName" fieldName="CustomerName" label="customer Name" />
+    <column name="dateAddedToQueue" fieldName="DateAddedToQueue" label="date Added To Queue" format="g" />
+    <column name="DWGGenServerName" fieldName="DwggenServerName" label="DWG Gen Server Name" />
+    <column name="dateDWGGenStarted" fieldName="DateDwggenStarted" label="date DWG Gen Started" format="g" />
+    <column name="dateDWGGenAllCompleted" fieldName="DateDwggenAllCompleted" label="date DWG Gen All Completed" format="g" />
+    <column name="dateSAPFirstFileReceived" fieldName="DateSapfirstFileReceived" label="date SAP First File Received" format="g" />
+    <column name="dateSAPFileAllCompleted" fieldName="DateSapfileAllCompleted" label="date SAP File All Completed" format="g" />
+    <column name="dateEmailSent" fieldName="DateEmailSent" label="date Email Sent" format="g" />
+    <column name="dateDWGGenFailed" fieldName="DateDwggenFailed" label="date DWG Gen Failed" format="g" />
+    <column name="SourceID" fieldName="SourceID" label="Source ID" />
+    <column name="dateTactonUploadStarted" fieldName="DateTactonUploadStarted" label="date Tacton Upload Started" format="g" />
+    <column name="dateTactonUploadCompleted" fieldName="DateTactonUploadCompleted" label="date Tacton Upload Completed" format="g" />
+    <column name="dateTactonUploadFailed" fieldName="DateTactonUploadFailed" label="date Tacton Upload Failed" format="g" />
+    <column name="tactonConfiguredProductId" fieldName="TactonConfiguredProductID" label="tacton Configured Product Id" />
+    <column name="tactonConfiguredProductStrong" fieldName="TactonConfiguredProductStrong" label="tacton Configured Product Strong" />
+    <column name="tactonSolutionId" fieldName="TactonSolutionID" label="tacton Solution Id" />
+    <column name="tactonDrawingId" fieldName="TactonDrawingID" label="tacton Drawing Id" />
+    <column name="tactonWorkflowStateID" fieldName="TactonWorkflowStateID" label="tacton Workflow State ID" />
+    <column name="tactonTransitionStatus" fieldName="TactonTransitionStatus" label="tacton Transition Status" />
+    <column name="tactonTicketNo" fieldName="TactonTicketNo" label="tacton Ticket No" />
+  </columns>
+</dataModel>

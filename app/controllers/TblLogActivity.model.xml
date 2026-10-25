@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="tbl_Log_Activity" alias="tbl_Log_Activity" created="2026-10-23T14:51:37" modified="2026-10-23T14:51:40" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="ActivityID" fieldName="ActivityID" label="Activity ID" />
+    <column name="AppName" fieldName="AppName" label="App Name" />
+    <column name="ActivityUser" fieldName="ActivityUser" label="Activity User" />
+    <column name="ActivityDate" fieldName="ActivityDate" label="Activity Date" format="g" />
+    <column name="ActivityType" fieldName="ActivityType" label="Activity Type" />
+    <column name="ActivityDetails" fieldName="ActivityDetails" label="Activity Details" />
+    <column name="OrginServer" fieldName="OrginServer" label="Orgin Server" />
+    <column name="QueueRequestID" fieldName="QueueRequestID" label="Queue Request ID" />
+  </columns>
+</dataModel>

@@ -1,0 +1,278 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="TblDwggenRequestqueue" conflictDetection="overwriteChanges" label="Tbl Dwggen Requestqueue" xmlns="urn:schemas-codeontime-com:data-aquarium">
+  <commands>
+    <command id="command1" type="Text">
+      <text><![CDATA[
+select
+	"tbl_dwgGen_RequestQueue"."requestID" "RequestID"
+	,"tbl_dwgGen_RequestQueue"."requesterUserName" "RequesterUserName"
+	,"tbl_dwgGen_RequestQueue"."requesterCompany" "RequesterCompany"
+	,"tbl_dwgGen_RequestQueue"."requesterEmail" "RequesterEmail"
+	,"tbl_dwgGen_RequestQueue"."SalesRepName" "SalesRepName"
+	,"tbl_dwgGen_RequestQueue"."SalesRepCompany" "SalesRepCompany"
+	,"tbl_dwgGen_RequestQueue"."SalesRepEmail" "SalesRepEmail"
+	,"tbl_dwgGen_RequestQueue"."DrawingFormat" "DrawingFormat"
+	,"tbl_dwgGen_RequestQueue"."masterJSON" "MasterJson"
+	,"tbl_dwgGen_RequestQueue"."statusID" "StatusID"
+	,"tbl_dwgGen_RequestQueue"."fileNameBase" "FileNameBase"
+	,"tbl_dwgGen_RequestQueue"."jobRequestType" "JobRequestType"
+	,"tbl_dwgGen_RequestQueue"."salesOrderNumber" "SalesOrderNumber"
+	,"tbl_dwgGen_RequestQueue"."quoteNumber" "QuoteNumber"
+	,"tbl_dwgGen_RequestQueue"."projectName" "ProjectName"
+	,"tbl_dwgGen_RequestQueue"."customerName" "CustomerName"
+	,"tbl_dwgGen_RequestQueue"."dateAddedToQueue" "DateAddedToQueue"
+	,"tbl_dwgGen_RequestQueue"."DWGGenServerName" "DwggenServerName"
+	,"tbl_dwgGen_RequestQueue"."dateDWGGenStarted" "DateDwggenStarted"
+	,"tbl_dwgGen_RequestQueue"."dateDWGGenAllCompleted" "DateDwggenAllCompleted"
+	,"tbl_dwgGen_RequestQueue"."dateSAPFirstFileReceived" "DateSapfirstFileReceived"
+	,"tbl_dwgGen_RequestQueue"."dateSAPFileAllCompleted" "DateSapfileAllCompleted"
+	,"tbl_dwgGen_RequestQueue"."dateEmailSent" "DateEmailSent"
+	,"tbl_dwgGen_RequestQueue"."dateDWGGenFailed" "DateDwggenFailed"
+	,"tbl_dwgGen_RequestQueue"."SourceID" "SourceID"
+	,"tbl_dwgGen_RequestQueue"."dateTactonUploadStarted" "DateTactonUploadStarted"
+	,"tbl_dwgGen_RequestQueue"."dateTactonUploadCompleted" "DateTactonUploadCompleted"
+	,"tbl_dwgGen_RequestQueue"."dateTactonUploadFailed" "DateTactonUploadFailed"
+	,"tbl_dwgGen_RequestQueue"."tactonConfiguredProductId" "TactonConfiguredProductID"
+	,"tbl_dwgGen_RequestQueue"."tactonConfiguredProductStrong" "TactonConfiguredProductStrong"
+	,"tbl_dwgGen_RequestQueue"."tactonSolutionId" "TactonSolutionID"
+	,"tbl_dwgGen_RequestQueue"."tactonDrawingId" "TactonDrawingID"
+	,"tbl_dwgGen_RequestQueue"."tactonWorkflowStateID" "TactonWorkflowStateID"
+	,"tbl_dwgGen_RequestQueue"."tactonTransitionStatus" "TactonTransitionStatus"
+	,"tbl_dwgGen_RequestQueue"."tactonTicketNo" "TactonTicketNo"
+from "dbo"."tbl_dwgGen_RequestQueue" "tbl_dwgGen_RequestQueue"
+]]></text>
+    </command>
+    <command id="requestIDIdentityCommand" type="Text" event="Inserted">
+      <text><![CDATA[select @@identity]]></text>
+      <output>
+        <fieldOutput fieldName="RequestID" />
+      </output>
+    </command>
+  </commands>
+  <fields>
+    <field name="RequestID" type="Int32" allowNulls="false" label="request ID" readOnly="true" showInSummary="true" />
+    <field name="RequesterUserName" type="String" allowNulls="false" label="requester User Name" length="100" showInSummary="true" />
+    <field name="RequesterCompany" type="String" label="requester Company" length="100" showInSummary="true" />
+    <field name="RequesterEmail" type="String" label="requester Email" length="100" showInSummary="true" />
+    <field name="SalesRepName" type="String" label="Sales Rep Name" length="100" showInSummary="true" />
+    <field name="SalesRepCompany" type="String" label="Sales Rep Company" length="100" />
+    <field name="SalesRepEmail" type="String" label="Sales Rep Email" length="100" />
+    <field name="DrawingFormat" type="String" label="Drawing Format" length="70" />
+    <field name="MasterJson" type="String" allowQBE="false" allowSorting="false" label="master JSON" />
+    <field name="StatusID" type="Int32" label="status ID" />
+    <field name="FileNameBase" type="String" label="file Name Base" length="100" />
+    <field name="JobRequestType" type="String" label="job Request Type" length="100" />
+    <field name="SalesOrderNumber" type="String" label="sales Order Number" length="100" />
+    <field name="QuoteNumber" type="String" label="quote Number" length="100" />
+    <field name="ProjectName" type="String" label="project Name" length="100" />
+    <field name="CustomerName" type="String" label="customer Name" length="100" />
+    <field name="DateAddedToQueue" type="DateTime" dataFormatString="g" label="date Added To Queue" />
+    <field name="DwggenServerName" type="String" label="DWG Gen Server Name" length="200" />
+    <field name="DateDwggenStarted" type="DateTime" dataFormatString="g" label="date DWG Gen Started" />
+    <field name="DateDwggenAllCompleted" type="DateTime" dataFormatString="g" label="date DWG Gen All Completed" />
+    <field name="DateSapfirstFileReceived" type="DateTime" dataFormatString="g" label="date SAP First File Received" />
+    <field name="DateSapfileAllCompleted" type="DateTime" dataFormatString="g" label="date SAP File All Completed" />
+    <field name="DateEmailSent" type="DateTime" dataFormatString="g" label="date Email Sent" />
+    <field name="DateDwggenFailed" type="DateTime" dataFormatString="g" label="date DWG Gen Failed" />
+    <field name="SourceID" type="Int32" label="Source ID" />
+    <field name="DateTactonUploadStarted" type="DateTime" dataFormatString="g" label="date Tacton Upload Started" />
+    <field name="DateTactonUploadCompleted" type="DateTime" dataFormatString="g" label="date Tacton Upload Completed" />
+    <field name="DateTactonUploadFailed" type="DateTime" dataFormatString="g" label="date Tacton Upload Failed" />
+    <field name="TactonConfiguredProductID" type="String" label="tacton Configured Product Id" length="100" />
+    <field name="TactonConfiguredProductStrong" type="String" label="tacton Configured Product Strong" length="100" />
+    <field name="TactonSolutionID" type="String" label="tacton Solution Id" length="100" />
+    <field name="TactonDrawingID" type="String" label="tacton Drawing Id" length="100" />
+    <field name="TactonWorkflowStateID" type="String" label="tacton Workflow State ID" length="10" />
+    <field name="TactonTransitionStatus" type="String" label="tacton Transition Status" length="20" />
+    <field name="TactonTicketNo" type="String" label="tacton Ticket No" length="100" />
+  </fields>
+  <views>
+    <view id="grid1" type="Grid" commandId="command1" label="Tbl Dwggen Requestqueue">
+      <headerText>$DefaultGridViewDescription</headerText>
+      <dataFields>
+        <dataField fieldName="RequestID" columns="15" />
+        <dataField fieldName="RequesterUserName" />
+        <dataField fieldName="RequesterCompany" />
+        <dataField fieldName="RequesterEmail" />
+        <dataField fieldName="SalesRepName" />
+        <dataField fieldName="SalesRepCompany" />
+        <dataField fieldName="SalesRepEmail" />
+        <dataField fieldName="DrawingFormat" />
+        <dataField fieldName="MasterJson" rows="5" />
+        <dataField fieldName="StatusID" columns="15" />
+        <dataField fieldName="FileNameBase" />
+        <dataField fieldName="JobRequestType" />
+        <dataField fieldName="SalesOrderNumber" />
+        <dataField fieldName="QuoteNumber" />
+        <dataField fieldName="ProjectName" />
+        <dataField fieldName="CustomerName" />
+        <dataField fieldName="DateAddedToQueue" columns="20" />
+        <dataField fieldName="DwggenServerName" />
+        <dataField fieldName="DateDwggenStarted" columns="20" />
+        <dataField fieldName="DateDwggenAllCompleted" columns="20" />
+        <dataField fieldName="DateSapfirstFileReceived" columns="20" />
+        <dataField fieldName="DateSapfileAllCompleted" columns="20" />
+        <dataField fieldName="DateEmailSent" columns="20" />
+        <dataField fieldName="DateDwggenFailed" columns="20" />
+        <dataField fieldName="SourceID" columns="15" />
+        <dataField fieldName="DateTactonUploadStarted" columns="20" />
+        <dataField fieldName="DateTactonUploadCompleted" columns="20" />
+        <dataField fieldName="DateTactonUploadFailed" columns="20" />
+        <dataField fieldName="TactonConfiguredProductID" />
+        <dataField fieldName="TactonConfiguredProductStrong" />
+        <dataField fieldName="TactonSolutionID" />
+        <dataField fieldName="TactonDrawingID" />
+        <dataField fieldName="TactonWorkflowStateID" columns="10" />
+        <dataField fieldName="TactonTransitionStatus" columns="20" />
+        <dataField fieldName="TactonTicketNo" />
+      </dataFields>
+    </view>
+    <view id="editForm1" type="Form" commandId="command1" label="Review Tbl Dwggen Requestqueue">
+      <headerText>$DefaultEditViewDescription</headerText>
+      <categories>
+        <category id="c1" headerText="Tbl Dwggen Requestqueue" flow="NewColumn">
+          <description><![CDATA[$DefaultEditDescription]]></description>
+          <dataFields>
+            <dataField fieldName="RequestID" columns="15" />
+            <dataField fieldName="RequesterUserName" />
+            <dataField fieldName="RequesterCompany" />
+            <dataField fieldName="RequesterEmail" />
+            <dataField fieldName="SalesRepName" />
+            <dataField fieldName="SalesRepCompany" />
+            <dataField fieldName="SalesRepEmail" />
+            <dataField fieldName="DrawingFormat" />
+            <dataField fieldName="MasterJson" rows="5" />
+            <dataField fieldName="StatusID" columns="15" />
+            <dataField fieldName="FileNameBase" />
+            <dataField fieldName="JobRequestType" />
+            <dataField fieldName="SalesOrderNumber" />
+            <dataField fieldName="QuoteNumber" />
+            <dataField fieldName="ProjectName" />
+            <dataField fieldName="CustomerName" />
+            <dataField fieldName="DateAddedToQueue" columns="20" />
+            <dataField fieldName="DwggenServerName" />
+            <dataField fieldName="DateDwggenStarted" columns="20" />
+            <dataField fieldName="DateDwggenAllCompleted" columns="20" />
+            <dataField fieldName="DateSapfirstFileReceived" columns="20" />
+            <dataField fieldName="DateSapfileAllCompleted" columns="20" />
+            <dataField fieldName="DateEmailSent" columns="20" />
+            <dataField fieldName="DateDwggenFailed" columns="20" />
+            <dataField fieldName="SourceID" columns="15" />
+            <dataField fieldName="DateTactonUploadStarted" columns="20" />
+            <dataField fieldName="DateTactonUploadCompleted" columns="20" />
+            <dataField fieldName="DateTactonUploadFailed" columns="20" />
+            <dataField fieldName="TactonConfiguredProductID" />
+            <dataField fieldName="TactonConfiguredProductStrong" />
+            <dataField fieldName="TactonSolutionID" />
+            <dataField fieldName="TactonDrawingID" />
+            <dataField fieldName="TactonWorkflowStateID" columns="10" />
+            <dataField fieldName="TactonTransitionStatus" columns="20" />
+            <dataField fieldName="TactonTicketNo" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+    <view id="createForm1" type="Form" commandId="command1" label="New Tbl Dwggen Requestqueue">
+      <headerText>$DefaultCreateViewDescription</headerText>
+      <categories>
+        <category id="c1" flow="NewColumn">
+          <description><![CDATA[$DefaultNewDescription]]></description>
+          <dataFields>
+            <dataField fieldName="RequestID" columns="15" />
+            <dataField fieldName="RequesterUserName" />
+            <dataField fieldName="RequesterCompany" />
+            <dataField fieldName="RequesterEmail" />
+            <dataField fieldName="SalesRepName" />
+            <dataField fieldName="SalesRepCompany" />
+            <dataField fieldName="SalesRepEmail" />
+            <dataField fieldName="DrawingFormat" />
+            <dataField fieldName="MasterJson" rows="5" />
+            <dataField fieldName="StatusID" columns="15" />
+            <dataField fieldName="FileNameBase" />
+            <dataField fieldName="JobRequestType" />
+            <dataField fieldName="SalesOrderNumber" />
+            <dataField fieldName="QuoteNumber" />
+            <dataField fieldName="ProjectName" />
+            <dataField fieldName="CustomerName" />
+            <dataField fieldName="DateAddedToQueue" columns="20" />
+            <dataField fieldName="DwggenServerName" />
+            <dataField fieldName="DateDwggenStarted" columns="20" />
+            <dataField fieldName="DateDwggenAllCompleted" columns="20" />
+            <dataField fieldName="DateSapfirstFileReceived" columns="20" />
+            <dataField fieldName="DateSapfileAllCompleted" columns="20" />
+            <dataField fieldName="DateEmailSent" columns="20" />
+            <dataField fieldName="DateDwggenFailed" columns="20" />
+            <dataField fieldName="SourceID" columns="15" />
+            <dataField fieldName="DateTactonUploadStarted" columns="20" />
+            <dataField fieldName="DateTactonUploadCompleted" columns="20" />
+            <dataField fieldName="DateTactonUploadFailed" columns="20" />
+            <dataField fieldName="TactonConfiguredProductID" />
+            <dataField fieldName="TactonConfiguredProductStrong" />
+            <dataField fieldName="TactonSolutionID" />
+            <dataField fieldName="TactonDrawingID" />
+            <dataField fieldName="TactonWorkflowStateID" columns="10" />
+            <dataField fieldName="TactonTransitionStatus" columns="20" />
+            <dataField fieldName="TactonTicketNo" />
+          </dataFields>
+        </category>
+      </categories>
+    </view>
+  </views>
+  <actions>
+    <actionGroup id="ag1" scope="Grid">
+      <action id="a1" commandName="Select" commandArgument="editForm1" />
+      <action id="a2" commandName="Edit" />
+      <action id="a3" commandName="Delete" />
+      <action id="a6" />
+      <action id="a7" commandName="New" commandArgument="grid1" />
+      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag2" scope="Form">
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
+      <action id="a3" commandName="Cancel" />
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" commandArgument="Save" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" commandArgument="Save" />
+      <action id="a7" whenLastCommandName="New" commandName="Insert" commandArgument="SaveAndNew" />
+      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
+      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
+      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
+      <action id="a13" whenLastCommandName="Insert" whenLastCommandArgument="Save" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenClientScript="this.hasDetails()" />
+      <action id="a14" whenLastCommandName="Insert" whenLastCommandArgument="SaveAndNew" commandName="New" commandArgument="createForm1" />
+    </actionGroup>
+    <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
+      <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />
+    </actionGroup>
+    <actionGroup id="ag4" scope="ActionBar" headerText="Edit/Delete" flat="true">
+      <action id="a1" whenKeySelected="true" commandName="Edit" commandArgument="editForm1" cssClass="EditIcon" whenView="grid1" />
+      <action id="a2" whenKeySelected="true" commandName="Delete" cssClass="DeleteIcon" whenView="grid1" />
+    </actionGroup>
+    <actionGroup id="ag5" scope="ActionBar" headerText="Actions">
+      <action id="a1" commandName="ExportCsv" />
+      <action id="a2" />
+      <action id="a3" commandName="ExportRowset" />
+      <action id="a4" commandName="ExportRss" />
+      <action id="a7" commandName="DataSheet" />
+      <action id="a8" commandName="Grid" />
+    </actionGroup>
+    <actionGroup id="ag6" scope="ActionBar" headerText="Record">
+      <action id="a1" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a2" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a3" whenLastCommandName="New" commandName="Insert" />
+      <action id="a4" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+    <actionGroup id="ag7" scope="ActionBar" headerText="Report">
+      <action id="a1" commandName="ReportAsPdf" />
+      <action id="a2" commandName="ReportAsImage" />
+      <action id="a3" commandName="ReportAsExcel" />
+      <action id="a4" commandName="ReportAsWord" />
+    </actionGroup>
+    <actionGroup id="ag8" scope="Row">
+      <action id="a4" whenLastCommandName="Edit" commandName="Update" />
+      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
+      <action id="a6" whenLastCommandName="New" commandName="Insert" />
+      <action id="a7" whenLastCommandName="New" commandName="Cancel" />
+    </actionGroup>
+  </actions>
+</dataController>
