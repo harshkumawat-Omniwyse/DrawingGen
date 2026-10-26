@@ -1,0 +1,173 @@
+/* Request detail — centered modal (not reading pane) */
+.app-page-modal.request-queue-detail.app-reading-pane-detail {
+  left: auto !important;
+  right: auto !important;
+  width: min(960px, 94vw) !important;
+  max-width: 960px;
+  margin: 2vh auto;
+  position: relative !important;
+  transform: none !important;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.24);
+}
+
+.app-page-modal.request-queue-detail:not(.app-reading-pane-detail) {
+  max-width: 960px;
+}
+
+.app-page-modal.request-queue-detail .app-bar {
+  background: #0078d4;
+  color: #fff;
+  min-height: 72px;
+}
+
+.app-page-modal.request-queue-detail .rq-modal-title {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  padding: 4px 0;
+}
+
+.app-page-modal.request-queue-detail .rq-modal-title .rq-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  opacity: 0.95;
+}
+
+.app-page-modal.request-queue-detail .rq-modal-title .rq-id {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+.app-page-modal.request-queue-detail .app-bar-heading,
+.app-page-modal.request-queue-detail .app-bar h1 {
+  color: #fff;
+}
+
+/* Chevron wizard */
+.rq-wizard {
+  display: flex;
+  flex-wrap: nowrap;
+  margin: 0 0 16px;
+  padding: 0;
+  list-style: none;
+  overflow-x: auto;
+  background: #f3f2f1;
+  border: 1px solid #e1dfdd;
+}
+
+.rq-wizard li {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 88px;
+  margin: 0;
+  padding: 10px 8px 10px 20px;
+  font-size: 11px;
+  line-height: 1.25;
+  text-align: center;
+  color: #323130;
+  background: #e1dfdd;
+  white-space: normal;
+}
+
+.rq-wizard li:first-child {
+  padding-left: 12px;
+}
+
+.rq-wizard li::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -12px;
+  width: 0;
+  height: 0;
+  border-top: 22px solid transparent;
+  border-bottom: 22px solid transparent;
+  border-left: 12px solid #e1dfdd;
+  z-index: 2;
+}
+
+.rq-wizard li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 22px solid transparent;
+  border-bottom: 22px solid transparent;
+  border-left: 12px solid #f3f2f1;
+  z-index: 1;
+}
+
+.rq-wizard li:first-child::before {
+  display: none;
+}
+
+.rq-wizard li.rq-active {
+  background: #0078d4;
+  color: #fff;
+  font-weight: 600;
+}
+
+.rq-wizard li.rq-active::after {
+  border-left-color: #0078d4;
+}
+
+.rq-wizard li.rq-future {
+  background: #fff;
+  color: #605e5c;
+}
+
+.rq-wizard li.rq-future::after {
+  border-left-color: #fff;
+}
+
+.rq-wizard li.rq-complete {
+  background: #c8c6c4;
+  color: #323130;
+}
+
+.rq-wizard li.rq-complete::after {
+  border-left-color: #c8c6c4;
+}
+
+.app-page-modal.request-queue-detail [data-category-name="details"] > .app-category-header,
+.app-page-modal.request-queue-detail [data-category-name="requester"] > .app-category-header,
+.app-page-modal.request-queue-detail [data-category-name="salesRep"] > .app-category-header {
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 13px;
+  background: #f3f2f1;
+}
+
+.app-page-modal.request-queue-detail [data-view="requestDetailForm"] [data-category-name="details"] [data-container="row"],
+.app-page-modal.request-queue-detail [data-view="requestDetailForm"] [data-category-name="requester"] [data-container="row"],
+.app-page-modal.request-queue-detail [data-view="requestDetailForm"] [data-category-name="salesRep"] [data-container="row"] {
+  display: inline-block;
+  vertical-align: top;
+  width: 33.33%;
+  box-sizing: border-box;
+  padding-right: 12px;
+}
+
+@media (max-width: 720px) {
+  .app-page-modal.request-queue-detail [data-view="requestDetailForm"] [data-category-name="details"] [data-container="row"],
+  .app-page-modal.request-queue-detail [data-view="requestDetailForm"] [data-category-name="requester"] [data-container="row"],
+  .app-page-modal.request-queue-detail [data-view="requestDetailForm"] [data-category-name="salesRep"] [data-container="row"] {
+    width: 50%;
+  }
+}
+
+.app-page-modal.request-queue-detail .app-bar-footer .rq-close-btn,
+.app-page-modal.request-queue-detail .app-bar-footer [data-action-path="cancel"] {
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.app-page-modal.request-queue-detail .app-bar-footer {
+  background: #f3f2f1;
+  border-top: 1px solid #e1dfdd;
+}
