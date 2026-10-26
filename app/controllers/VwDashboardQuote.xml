@@ -67,12 +67,11 @@ from "dbo"."vw_Dashboard_Quote" "vw_Dashboard_Quote"
         </category>
       </categories>
     </view>
-    <view id="chartCompany" type="Grid" label="Requester Company" commandId="command1" legend="true" tag="view-style-charts">
-      <headerText>Quote Drawing requests received from SelectSGS users</headerText>
+    <view id="chartCompany" type="Chart" commandId="command1" label="Requester Company">
       <dataFields>
         <dataField fieldName="ReceivedDate" tag="pivot1-row1-quarter-columnstacked pivot2-row1-quarter-columnstacked" />
+        <dataField fieldName="RequestID" columns="15" aggregate="Count" tag="pivot1-val1 pivot2-val1 pivot3-val1" />
         <dataField fieldName="RequesterCompany" tag="pivot1-col1" />
-        <dataField fieldName="RequestID" aggregate="Count" tag="pivot1-val1-count pivot2-val1-count pivot3-val1-count" />
         <dataField fieldName="Requester" tag="pivot2-col1" />
         <dataField fieldName="Status" tag="pivot3-row1-donut" />
       </dataFields>
