@@ -67,7 +67,7 @@ from "dbo"."vw_Dashboard_Order" "vw_Dashboard_Order"
         </category>
       </categories>
     </view>
-    <view id="chartCompany" type="Chart" commandId="command1" label="Requester Company">
+    <view id="chartCompany" type="Grid" commandId="command1" label="Requester Company">
       <dataFields>
         <dataField fieldName="ReceivedDate" columns="10" tag="pivot1-row1-quarter-columnstacked pivot2-row1-quarter-columnstacked" />
         <dataField fieldName="RequesterCompany" tag="pivot1-col1" />

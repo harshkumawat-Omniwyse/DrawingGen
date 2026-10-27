@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logs>
+  <log type="Controllers">
+    <c y="NodeSet" t="2026-10-27T08:36:57.1391709Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <update>
+        <Type>Grid</Type>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-27T08:37:13.8505962Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartCompany" />
+      <update>
+        <Type>Grid</Type>
+      </update>
+    </c>
+  </log>
+  <log type="Application">
+    <c y="NodeSet" t="2026-10-27T06:43:56.3491041Z">
+      <page name="TblLogActivity" />
+      <dataView id="view1" />
+      <update>
+        <ShowDetailsInListMode>false</ShowDetailsInListMode>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-27T06:44:20.4468451Z">
+      <page name="TblLogEmail" />
+      <dataView id="view1" />
+      <update>
+        <ShowDetailsInListMode>false</ShowDetailsInListMode>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-27T06:59:03.2150010Z">
+      <page name="TblDwggenRequestqueue" />
+      <dataView id="view1" />
+      <update>
+        <ShowDetailsInListMode>false</ShowDetailsInListMode>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-27T08:39:19.2990476Z">
+      <page name="TblDwggenRequestqueue" />
+      <control id="rqAssets" />
+      <delete />
+    </c>
+  </log>
+</logs>

@@ -47,7 +47,7 @@ select
 	,CASE
 		WHEN "tbl_dwgGen_RequestQueue"."dateEmailSent" IS NOT NULL THEN 'DWG Download Email'
 		WHEN "tbl_dwgGen_RequestQueue"."dateSAPFileAllCompleted" IS NOT NULL THEN 'File Transfer'
-		WHEN "tbl_dwgGen_RequestQueue"."dateSAPFirstFileReceived" IS NOT NULL THEN 'SAP Processing'
+		WHEN "tbl_dwgGen_RequestQueue"."dateSAPFirstFileReceived" IS NOT NULL THEN 'SAP'
 		WHEN "tbl_dwgGen_RequestQueue"."dateDWGGenStarted" IS NOT NULL THEN 'AutoCAD Processing'
 		WHEN "tbl_dwgGen_RequestQueue"."dateTactonUploadStarted" IS NOT NULL
 			OR "tbl_dwgGen_RequestQueue"."dateTactonUploadCompleted" IS NOT NULL THEN 'Caller'
@@ -114,7 +114,7 @@ from "dbo"."tbl_dwgGen_RequestQueue" "tbl_dwgGen_RequestQueue"
         <dataField fieldName="DateEmailSent" columns="20" />
       </dataFields>
     </view>
-    <view id="requestDetailForm" type="Form" commandId="command1" label="Request Details" tags="request-detail reading-pane-none content-stub-none">
+    <view id="requestDetailForm" type="Form" commandId="command1" label="Request Details" tags="request-detail action-buttons-none reading-pane-none content-stub-none">
       <headerText>Request Details</headerText>
       <categories>
         <category id="details" headerText="Details" flow="NewColumn">
@@ -248,10 +248,9 @@ from "dbo"."tbl_dwgGen_RequestQueue" "tbl_dwgGen_RequestQueue"
       <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
     </actionGroup>
     <actionGroup id="ag2" scope="Form">
-      <action id="a1" commandName="Edit" whenView="editForm1" />
-      <action id="a2" commandName="Delete" whenView="editForm1" />
+      <action id="a1" commandName="Edit" />
+      <action id="a2" commandName="Delete" />
       <action id="a3" commandName="Cancel" />
-      <action id="a15" whenView="requestDetailForm" commandName="Cancel" headerText="Close" />
       <action id="a4" whenLastCommandName="Edit" commandName="Update" commandArgument="Save" />
       <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
       <action id="a6" whenLastCommandName="New" commandName="Insert" commandArgument="Save" />
