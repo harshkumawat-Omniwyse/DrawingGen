@@ -196,7 +196,12 @@ from "dbo"."tbl_dwgGen_RequestQueue" "tbl_dwgGen_RequestQueue"
             <dataField fieldName="TactonTicketNo" />
           </dataFields>
         </category>
-        <category headerText="Details" wizard="Request Submitted" id="c2">
+      </categories>
+    </view>
+    <view id="requestDetailForm" commandId="command1" type="Form" label="Request" tags="reading-pane-none content-stub-none">
+      <headerText>Request</headerText>
+      <categories>
+        <category headerText="Details" wizard="Request Submitted" id="c2" flow="NewColumn">
           <dataFields>
             <dataField fieldName="RequestID" columns="15">
               <headerText>Request number</headerText>
@@ -217,7 +222,7 @@ from "dbo"."tbl_dwgGen_RequestQueue" "tbl_dwgGen_RequestQueue"
   </views>
   <actions>
     <actionGroup id="ag1" scope="Grid">
-      <!-- Select removed: prevents reading-pane / summary side panel on row click -->
+      <action id="a1" commandName="Select" commandArgument="requestDetailForm" headerText="requestDetailForm" />
       <action id="a2" commandName="Edit" />
       <action id="a3" commandName="Delete" />
       <action id="a6" />

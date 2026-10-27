@@ -130,6 +130,58 @@
         <DataViewShowInSummary>false</DataViewShowInSummary>
       </update>
     </c>
+    <c y="NodeSet" t="2026-10-27T10:46:06.5921204Z">
+      <controller name="TblDwggenRequestqueue" />
+      <insert type="view">
+        <ViewId>requestDetailForm</ViewId>
+        <Type>Form</Type>
+        <Legend>false</Legend>
+        <CommandId>command1</CommandId>
+        <Label>Request</Label>
+        <HeaderText>Request</HeaderText>
+        <ShowInSelector>true</ShowInSelector>
+        <ReportTemplate>false</ReportTemplate>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-27T10:46:15.9105803Z">
+      <controller name="TblDwggenRequestqueue" />
+      <view id="requestDetailForm" />
+      <move>
+        <controller name="TblDwggenRequestqueue" />
+        <view id="createForm1" />
+        <category id="c2" />
+      </move>
+    </c>
+    <c y="NodeSet" t="2026-10-27T10:46:18.2347616Z">
+      <controller name="TblDwggenRequestqueue" />
+      <view id="requestDetailForm" />
+      <move>
+        <controller name="TblDwggenRequestqueue" />
+        <view id="createForm1" />
+        <category id="c3" />
+      </move>
+    </c>
+    <c y="NodeSet" t="2026-10-27T10:46:24.5010724Z">
+      <controller name="TblDwggenRequestqueue" />
+      <view id="createForm1" />
+      <category id="c2" />
+      <delete />
+    </c>
+    <c y="NodeSet" t="2026-10-27T10:46:30.3379996Z">
+      <controller name="TblDwggenRequestqueue" />
+      <view id="createForm1" />
+      <category id="c3" />
+      <delete />
+    </c>
+    <c y="NodeSet" t="2026-10-27T10:50:32.3425507Z">
+      <controller name="TblDwggenRequestqueue" />
+      <actionGroup id="ag1" />
+      <action id="a1" />
+      <update>
+        <CommandArgument>requestDetailForm</CommandArgument>
+        <HeaderText>requestDetailForm</HeaderText>
+      </update>
+    </c>
   </log>
   <log type="Application">
     <c y="NodeSet" t="2026-10-27T06:43:56.3491041Z">
@@ -157,6 +209,13 @@
       <page name="TblDwggenRequestqueue" />
       <control id="rqAssets" />
       <delete />
+    </c>
+    <c y="NodeSet" t="2026-10-27T10:54:37.8375417Z">
+      <page name="TblDwggenRequestqueue" />
+      <dataView id="view1" />
+      <update>
+        <ShowPageSize>false</ShowPageSize>
+      </update>
     </c>
   </log>
 </logs>
