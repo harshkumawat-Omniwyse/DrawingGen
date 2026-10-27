@@ -15,6 +15,121 @@
         <Type>Grid</Type>
       </update>
     </c>
+    <c y="NodeSet" t="2026-10-27T09:32:40.2895124Z">
+      <controller name="TblDwggenRequestqueue" />
+      <view id="requestDetailForm" />
+      <delete />
+    </c>
+    <c y="NodeSet" t="2026-10-27T09:36:05.2931640Z">
+      <controller name="TblDwggenRequestqueue" />
+      <view id="createForm1" />
+      <insert type="category">
+        <HeaderText>Details</HeaderText>
+        <Wizard>Request Submitted</Wizard>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-27T09:36:48.6561383Z">
+      <controller name="TblDwggenRequestqueue" />
+      <view id="createForm1" />
+      <category id="c2" />
+      <copy>
+        <controller name="TblDwggenRequestqueue" />
+        <view id="createForm1" />
+        <category id="c1" />
+        <dataField fieldName="RequestID" />
+      </copy>
+    </c>
+    <c y="NodeSet" t="2026-10-27T09:38:03.8895595Z">
+      <controller name="TblDwggenRequestqueue" />
+      <view id="createForm1" />
+      <dataField fieldName="RequestID" />
+      <update>
+        <HeaderText>Request number</HeaderText>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-27T09:38:06.9583425Z">
+      <controller name="TblDwggenRequestqueue" />
+      <view id="createForm1" />
+      <dataField fieldName="RequestID" />
+      <update>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-27T09:38:47.4243423Z">
+      <controller name="TblDwggenRequestqueue" />
+      <view id="createForm1" />
+      <category id="c2" />
+      <copy>
+        <controller name="TblDwggenRequestqueue" />
+        <view id="createForm1" />
+        <category id="c1" />
+        <dataField fieldName="JobRequestType" />
+      </copy>
+    </c>
+    <c y="NodeSet" t="2026-10-27T09:39:27.4916369Z">
+      <controller name="TblDwggenRequestqueue" />
+      <view id="createForm1" />
+      <insert type="category">
+        <HeaderText>Requester</HeaderText>
+        <Wizard>Caller</Wizard>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-27T09:39:48.4796348Z">
+      <controller name="TblDwggenRequestqueue" />
+      <view id="createForm1" />
+      <category id="c3" />
+      <copy>
+        <controller name="TblDwggenRequestqueue" />
+        <view id="createForm1" />
+        <category id="c1" />
+        <dataField fieldName="RequesterUserName" />
+      </copy>
+    </c>
+    <c y="NodeSet" t="2026-10-27T09:40:05.8868107Z">
+      <controller name="TblDwggenRequestqueue" />
+      <view id="createForm1" />
+      <category id="c3" />
+      <copy>
+        <controller name="TblDwggenRequestqueue" />
+        <view id="createForm1" />
+        <category id="c1" />
+        <dataField fieldName="FileNameBase" />
+      </copy>
+    </c>
+    <c y="NodeSet" t="2026-10-27T09:40:28.4164526Z">
+      <controller name="TblDwggenRequestqueue" />
+      <view id="createForm1" />
+      <category id="c3" />
+      <copy>
+        <controller name="TblDwggenRequestqueue" />
+        <view id="createForm1" />
+        <category id="c1" />
+        <dataField fieldName="ProjectName" />
+      </copy>
+    </c>
+    <c y="NodeSet" t="2026-10-27T09:41:05.7868934Z">
+      <controller name="TblDwggenRequestqueue" />
+      <view id="createForm1" />
+      <category id="c3" />
+      <copy>
+        <controller name="TblDwggenRequestqueue" />
+        <view id="createForm1" />
+        <category id="c1" />
+        <dataField fieldName="RequesterCompany" />
+      </copy>
+    </c>
+    <c y="NodeSet" t="2026-10-27T09:41:50.3842079Z">
+      <controller name="TblDwggenRequestqueue" />
+      <view id="createForm1" />
+      <dataField fieldName="RequesterCompany" />
+      <update>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
   </log>
   <log type="Application">
     <c y="NodeSet" t="2026-10-27T06:43:56.3491041Z">

@@ -114,39 +114,6 @@ from "dbo"."tbl_dwgGen_RequestQueue" "tbl_dwgGen_RequestQueue"
         <dataField fieldName="DateEmailSent" columns="20" />
       </dataFields>
     </view>
-    <view id="requestDetailForm" type="Form" commandId="command1" label="Request Details" tags="request-detail action-buttons-none reading-pane-none content-stub-none">
-      <headerText>Request Details</headerText>
-      <categories>
-        <category id="details" headerText="Details" flow="NewColumn">
-          <dataFields>
-            <dataField fieldName="RequestID" columns="15" />
-            <dataField fieldName="JobRequestType" />
-            <dataField fieldName="DrawingFormat" />
-            <dataField fieldName="StatusText" />
-            <dataField fieldName="SubStatusText" />
-          </dataFields>
-        </category>
-        <category id="requester" headerText="Requester" flow="NewColumn">
-          <dataFields>
-            <dataField fieldName="RequesterUserName" />
-            <dataField fieldName="FileNameBase" />
-            <dataField fieldName="ProjectName" />
-            <dataField fieldName="RequesterCompany" />
-            <dataField fieldName="SalesOrderNumber" />
-            <dataField fieldName="CustomerName" />
-            <dataField fieldName="RequesterEmail" />
-            <dataField fieldName="QuoteNumber" />
-          </dataFields>
-        </category>
-        <category id="salesRep" headerText="Sales Rep" flow="NewColumn">
-          <dataFields>
-            <dataField fieldName="SalesRepName" />
-            <dataField fieldName="SalesRepCompany" />
-            <dataField fieldName="SalesRepEmail" />
-          </dataFields>
-        </category>
-      </categories>
-    </view>
     <view id="editForm1" type="Form" commandId="command1" label="Review Tbl Dwggen Requestqueue">
       <headerText>$DefaultEditViewDescription</headerText>
       <categories>
@@ -198,9 +165,6 @@ from "dbo"."tbl_dwgGen_RequestQueue" "tbl_dwgGen_RequestQueue"
         <category id="c1" flow="NewColumn">
           <description><![CDATA[$DefaultNewDescription]]></description>
           <dataFields>
-            <dataField fieldName="RequestID" columns="15" />
-            <dataField fieldName="RequesterUserName" />
-            <dataField fieldName="RequesterCompany" />
             <dataField fieldName="RequesterEmail" />
             <dataField fieldName="SalesRepName" />
             <dataField fieldName="SalesRepCompany" />
@@ -208,11 +172,8 @@ from "dbo"."tbl_dwgGen_RequestQueue" "tbl_dwgGen_RequestQueue"
             <dataField fieldName="DrawingFormat" />
             <dataField fieldName="MasterJson" rows="5" />
             <dataField fieldName="StatusID" columns="15" />
-            <dataField fieldName="FileNameBase" />
-            <dataField fieldName="JobRequestType" />
             <dataField fieldName="SalesOrderNumber" />
             <dataField fieldName="QuoteNumber" />
-            <dataField fieldName="ProjectName" />
             <dataField fieldName="CustomerName" />
             <dataField fieldName="DateAddedToQueue" columns="20" />
             <dataField fieldName="DwggenServerName" />
@@ -235,12 +196,28 @@ from "dbo"."tbl_dwgGen_RequestQueue" "tbl_dwgGen_RequestQueue"
             <dataField fieldName="TactonTicketNo" />
           </dataFields>
         </category>
+        <category headerText="Details" wizard="Request Submitted" id="c2">
+          <dataFields>
+            <dataField fieldName="RequestID" columns="15">
+              <headerText>Request number</headerText>
+            </dataField>
+            <dataField fieldName="JobRequestType" />
+          </dataFields>
+        </category>
+        <category headerText="Requester" wizard="Caller" id="c3">
+          <dataFields>
+            <dataField fieldName="RequesterUserName" />
+            <dataField fieldName="FileNameBase" />
+            <dataField fieldName="ProjectName" />
+            <dataField fieldName="RequesterCompany" />
+          </dataFields>
+        </category>
       </categories>
     </view>
   </views>
   <actions>
     <actionGroup id="ag1" scope="Grid">
-      <action id="a1" commandName="Select" commandArgument="requestDetailForm" />
+      <!-- Select removed: prevents reading-pane / summary side panel on row click -->
       <action id="a2" commandName="Edit" />
       <action id="a3" commandName="Delete" />
       <action id="a6" />
