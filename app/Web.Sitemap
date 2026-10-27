@@ -6,7 +6,5 @@
     <siteMapNode title="Activity Log" description="View activity log" url="~/pages/tbl-log-activity" />
     <siteMapNode title="Email Log" description="View email log" url="~/pages/tbl-log-email" />
     <siteMapNode title="Report Issue" description="Report an issue" url="~/pages/report-issue" />
-    <siteMapNode title="Vw Dashboard Order" description="View Vw Dashboard Order" url="~/pages/vw-dashboard-order" />
-    <siteMapNode title="Vw Dashboard Quote" description="View Vw Dashboard Quote" url="~/pages/vw-dashboard-quote" />
   </siteMapNode>
 </siteMap>
