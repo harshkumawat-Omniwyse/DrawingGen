@@ -257,7 +257,40 @@
         <IsPrimaryKey>true</IsPrimaryKey>
       </update>
     </c>
-  </log>
+    <c y="NodeSet" t="2026-10-28T18:10:00.0000000Z">
+    <page name="VwDashboardOrder" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2026-10-28T18:10:01.0000000Z">
+    <page name="VwDashboardQuote" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2026-10-28T18:10:02.0000000Z">
+    <page name="TblDwggenRequestqueue" />
+    <update>
+      <Title>Request Queue</Title>
+      <Path>Request Queue</Path>
+      <Index>1010</Index>
+      <CustomStyle>Wide</CustomStyle>
+    </update>
+  </c>
+  <c y="NodeSet" t="2026-10-28T18:10:03.0000000Z">
+    <page name="TblLogActivity" />
+    <update>
+      <Title>Activity Log</Title>
+      <Path>Activity Log</Path>
+      <Index>1020</Index>
+    </update>
+  </c>
+  <c y="NodeSet" t="2026-10-28T18:10:04.0000000Z">
+    <page name="TblLogEmail" />
+    <update>
+      <Title>Email Log</Title>
+      <Path>Email Log</Path>
+      <Index>1030</Index>
+    </update>
+  </c>
+</log>
   <log type="Application">
     <c y="NodeSet" t="2026-10-27T06:43:56.3491041Z">
       <page name="TblLogActivity" />
@@ -323,5 +356,38 @@
         <IsPrimaryKey>true</IsPrimaryKey>
       </update>
     </c>
-  </log>
+    <c y="NodeSet" t="2026-10-28T18:10:00.0000000Z">
+    <page name="VwDashboardOrder" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2026-10-28T18:10:01.0000000Z">
+    <page name="VwDashboardQuote" />
+    <delete />
+  </c>
+  <c y="NodeSet" t="2026-10-28T18:10:02.0000000Z">
+    <page name="TblDwggenRequestqueue" />
+    <update>
+      <Title>Request Queue</Title>
+      <Path>Request Queue</Path>
+      <Index>1010</Index>
+      <CustomStyle>Wide</CustomStyle>
+    </update>
+  </c>
+  <c y="NodeSet" t="2026-10-28T18:10:03.0000000Z">
+    <page name="TblLogActivity" />
+    <update>
+      <Title>Activity Log</Title>
+      <Path>Activity Log</Path>
+      <Index>1020</Index>
+    </update>
+  </c>
+  <c y="NodeSet" t="2026-10-28T18:10:04.0000000Z">
+    <page name="TblLogEmail" />
+    <update>
+      <Title>Email Log</Title>
+      <Path>Email Log</Path>
+      <Index>1030</Index>
+    </update>
+  </c>
+</log>
 </logs>
