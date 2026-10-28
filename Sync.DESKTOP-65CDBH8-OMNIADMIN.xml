@@ -895,6 +895,32 @@
         <HeaderText>MASTER JSON</HeaderText>
       </insert>
     </c>
+    <c y="NodeSet" t="2026-10-28T14:49:02.9706124Z">
+      <controller name="TblDwggenRequestqueue" />
+      <move>
+        <controller name="TblDwggenRequestqueue" />
+        <actionGroup id="ag1" />
+      </move>
+    </c>
+    <c y="NodeSet" t="2026-10-28T14:49:08.3140989Z">
+      <controller name="TblDwggenRequestqueue" />
+      <move>
+        <controller name="TblDwggenRequestqueue" />
+        <actionGroup id="ag1" />
+      </move>
+    </c>
+    <c y="NodeSet" t="2026-10-28T14:49:18.8350763Z">
+      <controller name="TblDwggenRequestqueue" />
+      <actionGroup id="ag1" />
+      <delete />
+    </c>
+    <c y="NodeSet" t="2026-10-28T14:49:30.2008125Z">
+      <controller name="TblDwggenRequestqueue" />
+      <insert type="actionGroup">
+        <Scope>Grid</Scope>
+        <Flat>false</Flat>
+      </insert>
+    </c>
   </log>
   <log type="Application">
     <c y="NodeSet" t="2026-10-25T08:55:09.5499724Z">
@@ -1163,6 +1189,75 @@
       </insert>
     </c>
     <c y="NodeSet" t="2026-10-28T09:09:58.3993835Z">
+      <page name="TblDwggenRequestqueue" />
+      <dataView id="view1" />
+      <update>
+        <ShowActionBar>true</ShowActionBar>
+        <ShowDescription>true</ShowDescription>
+        <ShowViewSelector>true</ShowViewSelector>
+        <ShowSearchBar>true</ShowSearchBar>
+        <ShowQuickFind>true</ShowQuickFind>
+        <ShowPageSize>true</ShowPageSize>
+        <ShowDetailsInListMode>true</ShowDetailsInListMode>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-28T14:39:33.5224436Z">
+      <page name="TblDwggenRequestqueue" />
+      <dataView id="view1" />
+      <update>
+        <Activator>Tab</Activator>
+        <ShowActionButtons>Top</ShowActionButtons>
+        <ShowActionBar>false</ShowActionBar>
+        <ShowDescription>false</ShowDescription>
+        <ShowViewSelector>false</ShowViewSelector>
+        <ShowSearchBar>false</ShowSearchBar>
+        <ShowQuickFind>false</ShowQuickFind>
+        <ShowModalForms>false</ShowModalForms>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-28T14:41:06.0021524Z">
+      <page name="TblDwggenRequestqueue" />
+      <dataView id="view1" />
+      <update>
+        <Activator>None</Activator>
+        <ShowActionButtons>None</ShowActionButtons>
+        <ShowActionBar>true</ShowActionBar>
+        <ShowDescription>true</ShowDescription>
+        <ShowViewSelector>true</ShowViewSelector>
+        <ShowSearchBar>true</ShowSearchBar>
+        <ShowQuickFind>true</ShowQuickFind>
+        <ShowModalForms>true</ShowModalForms>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-28T14:43:16.9148775Z">
+      <page name="TblDwggenRequestqueue" />
+      <dataView id="view1" />
+      <update>
+        <ShowModalForms>false</ShowModalForms>
+        <ShowDetailsInListMode>true</ShowDetailsInListMode>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-28T14:43:51.6955443Z">
+      <page name="TblDwggenRequestqueue" />
+      <dataView id="view1" />
+      <update>
+        <ShowModalForms>true</ShowModalForms>
+        <ShowDetailsInListMode>false</ShowDetailsInListMode>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-28T14:44:11.9893184Z">
+      <page name="TblDwggenRequestqueue" />
+      <dataView id="view1" />
+      <update>
+        <ShowActionBar>false</ShowActionBar>
+        <ShowDescription>false</ShowDescription>
+        <ShowViewSelector>false</ShowViewSelector>
+        <ShowSearchBar>false</ShowSearchBar>
+        <ShowQuickFind>false</ShowQuickFind>
+        <ShowPageSize>false</ShowPageSize>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-28T14:47:39.7812540Z">
       <page name="TblDwggenRequestqueue" />
       <dataView id="view1" />
       <update>

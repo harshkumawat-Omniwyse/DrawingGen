@@ -240,12 +240,6 @@ from "dbo"."tbl_dwgGen_RequestQueue" "tbl_dwgGen_RequestQueue"
     </view>
   </views>
   <actions>
-    <actionGroup id="ag1" scope="Grid">
-      <action id="a2" commandName="Edit" />
-      <action id="a3" commandName="Delete" />
-      <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
-      <action commandName="Select" commandArgument="editForm1" id="a100" />
-    </actionGroup>
     <actionGroup id="ag2" scope="Form">
       <action id="a1" commandName="Edit" />
       <action id="a2" commandName="Delete" />
@@ -295,5 +289,6 @@ from "dbo"."tbl_dwgGen_RequestQueue" "tbl_dwgGen_RequestQueue"
     </actionGroup>
     <actionGroup id="ag100" scope="ActionBar" flat="false" />
     <actionGroup id="ag101" scope="ActionBar" flat="false" />
+    <actionGroup id="ag102" scope="Grid" flat="false" />
   </actions>
 </dataController>
