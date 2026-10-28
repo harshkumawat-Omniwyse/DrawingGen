@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <dataController name="VwDashboardOrder" conflictDetection="overwriteChanges" label="Vw Dashboard Order" xmlns="urn:schemas-codeontime-com:data-aquarium">
   <commands>
     <command id="command1" type="Text">
@@ -20,6 +20,8 @@ from "dbo"."vw_Dashboard_Order" "vw_Dashboard_Order"
     </command>
   </commands>
   <fields>
+    <field name="StatusText" type="String" readOnly="true" label="Status" computed="true" />
+    <field name="SubStatusText" type="String" readOnly="true" label="Sub-status" computed="true" />
     <field name="RequestID" type="Int32" allowNulls="false" label="request ID" readOnly="true" showInSummary="true" isPrimaryKey="true" />
     <field name="ReceivedDate" type="DateTime" label="Received Date" readOnly="true" showInSummary="true" />
     <field name="RequesterCompany" type="String" allowNulls="false" label="Requester Company" readOnly="true" length="100" showInSummary="true" />
@@ -87,9 +89,10 @@ from "dbo"."vw_Dashboard_Order" "vw_Dashboard_Order"
       <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
     </actionGroup>
     <actionGroup id="ag2" scope="Form">
-      <action id="a1" commandName="Edit" />
-      <action id="a2" commandName="Delete" />
+      <action id="a1" commandName="Edit" whenView="editForm1" />
+      <action id="a2" commandName="Delete" whenView="editForm1" />
       <action id="a3" commandName="Cancel" />
+      <action id="a15" whenView="requestDetailForm" commandName="Cancel" headerText="Close" />
       <action id="a4" whenLastCommandName="Edit" commandName="Update" commandArgument="Save" />
       <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
       <action id="a6" whenLastCommandName="New" commandName="Insert" commandArgument="Save" />

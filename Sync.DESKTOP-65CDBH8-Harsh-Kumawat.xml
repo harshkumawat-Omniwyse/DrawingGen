@@ -250,6 +250,13 @@
       <actionGroup id="ag102" />
       <delete />
     </c>
+    <c y="NodeSet" t="2026-10-28T18:00:00.0000000Z">
+      <controller name="TblDwggenRequestqueue" />
+      <field name="RequestID" />
+      <update>
+        <IsPrimaryKey>true</IsPrimaryKey>
+      </update>
+    </c>
   </log>
   <log type="Application">
     <c y="NodeSet" t="2026-10-27T06:43:56.3491041Z">
@@ -307,6 +314,13 @@
         <ShowDetailsInListMode>false</ShowDetailsInListMode>
         <ShowModalForms>true</ShowModalForms>
         <Tag>view-style-grid reading-pane-none</Tag>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-28T18:00:00.0000000Z">
+      <controller name="TblDwggenRequestqueue" />
+      <field name="RequestID" />
+      <update>
+        <IsPrimaryKey>true</IsPrimaryKey>
       </update>
     </c>
   </log>

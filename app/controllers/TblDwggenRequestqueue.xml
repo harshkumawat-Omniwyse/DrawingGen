@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <dataController name="TblDwggenRequestqueue" conflictDetection="overwriteChanges" label="Tbl Dwggen Requestqueue" xmlns="urn:schemas-codeontime-com:data-aquarium">
   <commands>
     <command id="command1" type="Text">
@@ -66,11 +66,11 @@ from "dbo"."tbl_dwgGen_RequestQueue" "tbl_dwgGen_RequestQueue"
   <fields>
     <field name="StatusText" type="String" readOnly="true" label="Status" computed="true" />
     <field name="SubStatusText" type="String" readOnly="true" label="Sub-status" computed="true" />
-    <field name="RequestID" type="Int32" allowNulls="false" label="request ID" readOnly="true" showInSummary="true" />
-    <field name="RequesterUserName" type="String" allowNulls="false" label="requester User Name" length="100" showInSummary="true" />
-    <field name="RequesterCompany" type="String" label="requester Company" length="100" showInSummary="true" />
-    <field name="RequesterEmail" type="String" label="requester Email" length="100" showInSummary="true" />
-    <field name="SalesRepName" type="String" label="Sales Rep Name" length="100" showInSummary="true" />
+    <field name="RequestID" type="Int32" allowNulls="false" label="Number" readOnly="true" isPrimaryKey="true" />
+    <field name="RequesterUserName" type="String" allowNulls="false" label="requester User Name" length="100" />
+    <field name="RequesterCompany" type="String" label="requester Company" length="100" />
+    <field name="RequesterEmail" type="String" label="requester Email" length="100" />
+    <field name="SalesRepName" type="String" label="Sales Rep Name" length="100" />
     <field name="SalesRepCompany" type="String" label="Sales Rep Company" length="100" />
     <field name="SalesRepEmail" type="String" label="Sales Rep Email" length="100" />
     <field name="DrawingFormat" type="String" label="Drawing Format" length="70" />
@@ -106,41 +106,12 @@ from "dbo"."tbl_dwgGen_RequestQueue" "tbl_dwgGen_RequestQueue"
     <view id="grid1" type="Grid" commandId="command1" label="Tbl Dwggen Requestqueue">
       <headerText>$DefaultGridViewDescription</headerText>
       <dataFields>
-        <dataField fieldName="RequestID" columns="15" />
-        <dataField fieldName="RequesterUserName" />
-        <dataField fieldName="RequesterCompany" />
-        <dataField fieldName="RequesterEmail" />
-        <dataField fieldName="SalesRepName" />
-        <dataField fieldName="SalesRepCompany" />
-        <dataField fieldName="SalesRepEmail" />
-        <dataField fieldName="DrawingFormat" />
-        <dataField fieldName="MasterJson" rows="5" />
-        <dataField fieldName="StatusID" columns="15" />
-        <dataField fieldName="FileNameBase" />
+        <dataField fieldName="RequestID" columns="10" />
         <dataField fieldName="JobRequestType" />
-        <dataField fieldName="SalesOrderNumber" />
-        <dataField fieldName="QuoteNumber" />
-        <dataField fieldName="ProjectName" />
-        <dataField fieldName="CustomerName" />
+        <dataField fieldName="StatusText" />
+        <dataField fieldName="SubStatusText" />
         <dataField fieldName="DateAddedToQueue" columns="20" />
-        <dataField fieldName="DwggenServerName" />
-        <dataField fieldName="DateDwggenStarted" columns="20" />
-        <dataField fieldName="DateDwggenAllCompleted" columns="20" />
-        <dataField fieldName="DateSapfirstFileReceived" columns="20" />
-        <dataField fieldName="DateSapfileAllCompleted" columns="20" />
         <dataField fieldName="DateEmailSent" columns="20" />
-        <dataField fieldName="DateDwggenFailed" columns="20" />
-        <dataField fieldName="SourceID" columns="15" />
-        <dataField fieldName="DateTactonUploadStarted" columns="20" />
-        <dataField fieldName="DateTactonUploadCompleted" columns="20" />
-        <dataField fieldName="DateTactonUploadFailed" columns="20" />
-        <dataField fieldName="TactonConfiguredProductID" />
-        <dataField fieldName="TactonConfiguredProductStrong" />
-        <dataField fieldName="TactonSolutionID" />
-        <dataField fieldName="TactonDrawingID" />
-        <dataField fieldName="TactonWorkflowStateID" columns="10" />
-        <dataField fieldName="TactonTransitionStatus" columns="20" />
-        <dataField fieldName="TactonTicketNo" />
       </dataFields>
     </view>
     <view id="editForm1" type="Form" commandId="command1" label="Review Tbl Dwggen Requestqueue">
@@ -300,7 +271,7 @@ from "dbo"."tbl_dwgGen_RequestQueue" "tbl_dwgGen_RequestQueue"
   </views>
   <actions>
     <actionGroup id="ag1" scope="Grid">
-      <action id="a1" commandName="Select" commandArgument="requestDetailForm" headerText="requestDetailForm" />
+      <action id="a1" commandName="Select" commandArgument="requestDetailForm" />
       <action id="a2" commandName="Edit" />
       <action id="a3" commandName="Delete" />
       <action id="a6" />

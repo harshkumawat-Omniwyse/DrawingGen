@@ -93,9 +93,10 @@ from "dbo"."tbl_Log_Activity" "tbl_Log_Activity"
       <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
     </actionGroup>
     <actionGroup id="ag2" scope="Form">
-      <action id="a1" commandName="Edit" />
-      <action id="a2" commandName="Delete" />
+      <action id="a1" commandName="Edit" whenView="editForm1" />
+      <action id="a2" commandName="Delete" whenView="editForm1" />
       <action id="a3" commandName="Cancel" />
+      <action id="a15" whenView="requestDetailForm" commandName="Cancel" headerText="Close" />
       <action id="a4" whenLastCommandName="Edit" commandName="Update" commandArgument="Save" />
       <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
       <action id="a6" whenLastCommandName="New" commandName="Insert" commandArgument="Save" />
