@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <logs>
   <log type="Controllers">
     <c y="NodeSet" t="2026-10-27T08:36:57.1391709Z">
@@ -196,6 +196,60 @@
         <Flat>false</Flat>
       </insert>
     </c>
+    <c y="NodeSet" t="2026-10-28T16:40:55.5274132Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <dataField fieldName="ReceivedDate" />
+      <update>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-28T16:41:05.4832826Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartCompany" />
+      <dataField fieldName="ReceivedDate" />
+      <update>
+        <Hidden>false</Hidden>
+        <DataViewShowInSummary>false</DataViewShowInSummary>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-28T16:50:00.0000000Z">
+      <controller name="VwDashboardOrder" />
+      <view id="chartCompany" />
+      <update>
+        <CommandId>command1</CommandId>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-28T16:50:01.0000000Z">
+      <controller name="VwDashboardQuote" />
+      <view id="chartCompany" />
+      <update>
+        <CommandId>command1</CommandId>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-28T17:15:00.0000000Z">
+      <controller name="TblDwggenRequestqueue" />
+      <insert type="actionGroup">
+        <ActionGroupId>ag1</ActionGroupId>
+        <Scope>Grid</Scope>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-28T17:15:01.0000000Z">
+      <controller name="TblDwggenRequestqueue" />
+      <actionGroup id="ag1" />
+      <insert type="action">
+        <ActionId>a1</ActionId>
+        <CommandName>Select</CommandName>
+        <CommandArgument>requestDetailForm</CommandArgument>
+        <HeaderText>requestDetailForm</HeaderText>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-28T17:15:02.0000000Z">
+      <controller name="TblDwggenRequestqueue" />
+      <actionGroup id="ag102" />
+      <delete />
+    </c>
   </log>
   <log type="Application">
     <c y="NodeSet" t="2026-10-27T06:43:56.3491041Z">
@@ -243,6 +297,16 @@
       <dataView id="view1" />
       <update>
         <ShowDetailsInListMode>false</ShowDetailsInListMode>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-28T17:15:00.0000000Z">
+      <page name="TblDwggenRequestqueue" />
+      <dataView id="view1" />
+      <update>
+        <ShowInSummary>false</ShowInSummary>
+        <ShowDetailsInListMode>false</ShowDetailsInListMode>
+        <ShowModalForms>true</ShowModalForms>
+        <Tag>view-style-grid reading-pane-none</Tag>
       </update>
     </c>
   </log>

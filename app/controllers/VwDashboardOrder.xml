@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <dataController name="VwDashboardOrder" conflictDetection="overwriteChanges" label="Vw Dashboard Order" xmlns="urn:schemas-codeontime-com:data-aquarium">
   <commands>
     <command id="command1" type="Text">
@@ -69,7 +69,7 @@ from "dbo"."vw_Dashboard_Order" "vw_Dashboard_Order"
     </view>
     <view id="chartCompany" type="Grid" commandId="command1" label="Requester Company">
       <dataFields>
-        <dataField fieldName="ReceivedDate" columns="10" tag="pivot1-row1-date-columnstacked pivot2-row1-date-columnstacked" />
+        <dataField fieldName="ReceivedDate" columns="10" tag="pivot1-row1-date-columnstacked pivot2-row1-date-columnstacked" chart="XValue" />
         <dataField fieldName="RequesterCompany" tag="pivot1-col1" />
         <dataField fieldName="RequestID" aggregate="Count" textMode="Text" />
         <dataField fieldName="Requester" textMode="Text" tag="pivot2-col1" />

@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <dataController name="VwDashboardQuote" conflictDetection="overwriteChanges" label="Vw Dashboard Quote" xmlns="urn:schemas-codeontime-com:data-aquarium">
   <commands>
     <command id="command1" type="Text">

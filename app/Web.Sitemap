@@ -2,10 +2,10 @@
 <siteMap xmlns="http://schemas.microsoft.com/AspNet/SiteMap-File-1.0">
   <siteMapNode title="^SiteHome^Home^SiteHome^" description="" url="~/index.html">
     <siteMapNode title="^HomePath^Home^HomePath^" description="^HomeDesc^Application home page^HomeDesc^" url="~/pages/home" cssClass="Wide" />
-    <siteMapNode title="Tbl Dwggen Requestqueue" description="View Tbl Dwggen Requestqueue" url="~/pages/tbl-dwggen-requestqueue" />
     <siteMapNode title="Tbl Log Activity" description="View Tbl Log Activity" url="~/pages/tbl-log-activity" />
     <siteMapNode title="Tbl Log Email" description="View Tbl Log Email" url="~/pages/tbl-log-email" />
     <siteMapNode title="Vw Dashboard Order" description="View Vw Dashboard Order" url="~/pages/vw-dashboard-order" />
     <siteMapNode title="Vw Dashboard Quote" description="View Vw Dashboard Quote" url="~/pages/vw-dashboard-quote" />
+    <siteMapNode title="Tbl Dwggen Requestqueue" description="View Tbl Dwggen Requestqueue" url="~/pages/tbl-dwggen-requestqueue" />
   </siteMapNode>
 </siteMap>
