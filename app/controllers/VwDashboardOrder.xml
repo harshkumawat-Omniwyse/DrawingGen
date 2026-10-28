@@ -69,11 +69,11 @@ from "dbo"."vw_Dashboard_Order" "vw_Dashboard_Order"
     </view>
     <view id="chartCompany" type="Grid" commandId="command1" label="Requester Company">
       <dataFields>
-        <dataField fieldName="ReceivedDate" columns="10" tag="pivot1-row1-quarter-columnstacked pivot2-row1-quarter-columnstacked" />
+        <dataField fieldName="ReceivedDate" columns="10" tag="pivot1-row1-date-columnstacked pivot2-row1-date-columnstacked" />
         <dataField fieldName="RequesterCompany" tag="pivot1-col1" />
-        <dataField fieldName="RequestID" aggregate="Count" tag="pivot1-val1 pivot2-val1 pivot3-val1" />
-        <dataField fieldName="Requester" tag="pivot2-col1" />
-        <dataField fieldName="Status" tag="pivot3-row1-donut" />
+        <dataField fieldName="RequestID" aggregate="Count" textMode="Text" />
+        <dataField fieldName="Requester" textMode="Text" tag="pivot2-col1" />
+        <dataField fieldName="Status" textMode="Text" tag="pivot3-row1-donut" />
       </dataFields>
     </view>
   </views>

@@ -824,6 +824,77 @@
         <DataViewShowInSummary>false</DataViewShowInSummary>
       </update>
     </c>
+    <c y="NodeSet" t="2026-10-28T09:11:04.8740055Z">
+      <controller name="TblDwggenRequestqueue" />
+      <view id="grid1" />
+      <update>
+        <Label>Tbl Dwggen Requestqueue</Label>
+        <ShowInSelector>true</ShowInSelector>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-28T09:16:17.9589950Z">
+      <controller name="TblDwggenRequestqueue" />
+      <actionGroup id="ag1" />
+      <insert type="action">
+        <CommandName>Select</CommandName>
+        <CommandArgument>editForm1</CommandArgument>
+        <CausesValidation>true</CausesValidation>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-28T10:22:56.7685921Z">
+      <controller name="TblDwggenRequestqueue" />
+      <view id="requestDetailForm" />
+      <insert type="category">
+        <HeaderText>SALES REP</HeaderText>
+        <Wizard>AutoCAD</Wizard>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-28T10:23:31.5502960Z">
+      <controller name="TblDwggenRequestqueue" />
+      <view id="requestDetailForm" />
+      <insert type="category">
+        <HeaderText>Dates </HeaderText>
+        <Wizard>SAP Proccesing</Wizard>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-28T10:25:56.5412205Z">
+      <controller name="TblDwggenRequestqueue" />
+      <view id="requestDetailForm" />
+      <insert type="category">
+        <HeaderText>CYCLE TIME IN MINUTES</HeaderText>
+        <Wizard>File Transfer</Wizard>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-28T10:27:04.1354954Z">
+      <controller name="TblDwggenRequestqueue" />
+      <view id="requestDetailForm" />
+      <insert type="category">
+        <HeaderText>OTHERS</HeaderText>
+        <Wizard>DWG Download Email</Wizard>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-28T10:27:28.8329652Z">
+      <controller name="TblDwggenRequestqueue" />
+      <view id="requestDetailForm" />
+      <insert type="category">
+        <HeaderText>AutoCAD Files</HeaderText>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-28T10:27:50.6303971Z">
+      <controller name="TblDwggenRequestqueue" />
+      <view id="requestDetailForm" />
+      <category id="c7" />
+      <update>
+        <HeaderText>AUTOCAD FILES</HeaderText>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-28T10:28:08.7792419Z">
+      <controller name="TblDwggenRequestqueue" />
+      <view id="requestDetailForm" />
+      <insert type="category">
+        <HeaderText>MASTER JSON</HeaderText>
+      </insert>
+    </c>
   </log>
   <log type="Application">
     <c y="NodeSet" t="2026-10-25T08:55:09.5499724Z">
@@ -1090,6 +1161,19 @@
         <AutoSelectFirstRow>false</AutoSelectFirstRow>
         <AutoHide>Nothing</AutoHide>
       </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-28T09:09:58.3993835Z">
+      <page name="TblDwggenRequestqueue" />
+      <dataView id="view1" />
+      <update>
+        <ShowActionBar>true</ShowActionBar>
+        <ShowDescription>true</ShowDescription>
+        <ShowViewSelector>true</ShowViewSelector>
+        <ShowSearchBar>true</ShowSearchBar>
+        <ShowQuickFind>true</ShowQuickFind>
+        <ShowPageSize>true</ShowPageSize>
+        <ShowDetailsInListMode>true</ShowDetailsInListMode>
+      </update>
     </c>
   </log>
 </logs>

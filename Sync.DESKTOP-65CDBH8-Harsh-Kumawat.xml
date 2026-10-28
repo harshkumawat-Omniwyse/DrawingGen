@@ -182,6 +182,20 @@
         <HeaderText>requestDetailForm</HeaderText>
       </update>
     </c>
+    <c y="NodeSet" t="2026-10-28T13:53:25.9494800Z">
+      <controller name="TblDwggenRequestqueue" />
+      <insert type="actionGroup">
+        <Scope>ActionBar</Scope>
+        <Flat>false</Flat>
+      </insert>
+    </c>
+    <c y="NodeSet" t="2026-10-28T13:54:12.1075219Z">
+      <controller name="TblDwggenRequestqueue" />
+      <insert type="actionGroup">
+        <Scope>ActionBar</Scope>
+        <Flat>false</Flat>
+      </insert>
+    </c>
   </log>
   <log type="Application">
     <c y="NodeSet" t="2026-10-27T06:43:56.3491041Z">
@@ -215,6 +229,20 @@
       <dataView id="view1" />
       <update>
         <ShowPageSize>false</ShowPageSize>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-28T13:49:06.9577296Z">
+      <page name="TblDwggenRequestqueue" />
+      <dataView id="view1" />
+      <update>
+        <ShowDetailsInListMode>true</ShowDetailsInListMode>
+      </update>
+    </c>
+    <c y="NodeSet" t="2026-10-28T13:49:36.5797147Z">
+      <page name="TblDwggenRequestqueue" />
+      <dataView id="view1" />
+      <update>
+        <ShowDetailsInListMode>false</ShowDetailsInListMode>
       </update>
     </c>
   </log>

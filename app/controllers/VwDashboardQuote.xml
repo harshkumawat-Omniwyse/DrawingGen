@@ -69,11 +69,11 @@ from "dbo"."vw_Dashboard_Quote" "vw_Dashboard_Quote"
     </view>
     <view id="chartCompany" type="Grid" commandId="command1" label="Requester Company">
       <dataFields>
-        <dataField fieldName="ReceivedDate" tag="pivot1-row1-quarter-columnstacked pivot2-row1-quarter-columnstacked" />
-        <dataField fieldName="RequestID" columns="15" aggregate="Count" tag="pivot1-val1 pivot2-val1 pivot3-val1" />
+        <dataField fieldName="ReceivedDate" chart="XValue" textMode="Text" tag="pivot1-row1-date-columnstacked pivot2-row1-date-columnstacked" />
+        <dataField fieldName="RequestID" columns="15" aggregate="Count" />
         <dataField fieldName="RequesterCompany" tag="pivot1-col1" />
-        <dataField fieldName="Requester" tag="pivot2-col1" />
-        <dataField fieldName="Status" tag="pivot3-row1-donut" />
+        <dataField fieldName="Requester" textMode="Text" tag="pivot2-col1" />
+        <dataField fieldName="Status" textMode="Text" tag="pivot3-row1-donut" />
       </dataFields>
     </view>
   </views>
