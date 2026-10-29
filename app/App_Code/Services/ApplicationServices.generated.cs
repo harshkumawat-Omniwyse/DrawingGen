@@ -10,7 +10,7 @@ namespace FreeTrial.Services
 
         public virtual void Initialize()
         {
-            ApplicationServices.FrameworkAppName = "DrawingGen";
+            ApplicationServices.FrameworkAppName = "DWG GEN AUTOMATION ADMIN DASHBOARD";
             ApplicationServices.Version = "8.9.47.0";
             ApplicationServices.HostVersion = "1.2.5.0";
             var releaseMode = true;
