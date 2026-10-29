@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <dataController name="TblLogActivity" conflictDetection="overwriteChanges" label="Tbl Log Activity" xmlns="urn:schemas-codeontime-com:data-aquarium">
   <commands>
     <command id="command1" type="Text">
@@ -23,11 +23,11 @@ from "dbo"."tbl_Log_Activity" "tbl_Log_Activity"
     </command>
   </commands>
   <fields>
-    <field name="ActivityID" type="Int32" allowNulls="false" label="Activity ID" readOnly="true" showInSummary="true" />
-    <field name="AppName" type="String" label="App Name" length="100" showInSummary="true" />
-    <field name="ActivityUser" type="String" label="Activity User" length="100" showInSummary="true" />
-    <field name="ActivityDate" type="DateTime" dataFormatString="g" label="Activity Date" showInSummary="true" />
-    <field name="ActivityType" type="String" label="Activity Type" length="20" showInSummary="true" />
+    <field name="ActivityID" type="Int32" allowNulls="false" label="Activity ID" readOnly="true" isPrimaryKey="true" />
+    <field name="AppName" type="String" label="App Name" length="100" />
+    <field name="ActivityUser" type="String" label="Activity User" length="100" />
+    <field name="ActivityDate" type="DateTime" dataFormatString="g" label="Activity Date" />
+    <field name="ActivityType" type="String" label="Activity Type" length="20" />
     <field name="ActivityDetails" type="String" label="Activity Details" length="1000" />
     <field name="OrginServer" type="String" label="Orgin Server" length="100" />
     <field name="QueueRequestID" type="Int32" label="Queue Request ID" />
@@ -46,7 +46,7 @@ from "dbo"."tbl_Log_Activity" "tbl_Log_Activity"
         <dataField fieldName="QueueRequestID" columns="15" />
       </dataFields>
     </view>
-    <view id="editForm1" type="Form" commandId="command1" label="Review Tbl Log Activity">
+    <view id="editForm1" type="Form" commandId="command1" label="Activity Log" tags="reading-pane-none content-stub-none">
       <headerText>$DefaultEditViewDescription</headerText>
       <categories>
         <category id="c1" headerText="Tbl Log Activity" flow="NewColumn">
@@ -95,8 +95,7 @@ from "dbo"."tbl_Log_Activity" "tbl_Log_Activity"
     <actionGroup id="ag2" scope="Form">
       <action id="a1" commandName="Edit" whenView="editForm1" />
       <action id="a2" commandName="Delete" whenView="editForm1" />
-      <action id="a3" commandName="Cancel" />
-      <action id="a15" whenView="requestDetailForm" commandName="Cancel" headerText="Close" />
+      <action id="a3" commandName="Cancel" headerText="Close" />
       <action id="a4" whenLastCommandName="Edit" commandName="Update" commandArgument="Save" />
       <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
       <action id="a6" whenLastCommandName="New" commandName="Insert" commandArgument="Save" />

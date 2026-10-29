@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <dataController name="TblLogEmail" conflictDetection="overwriteChanges" label="Tbl Log Email" xmlns="urn:schemas-codeontime-com:data-aquarium">
   <commands>
     <command id="command1" type="Text">
@@ -25,11 +25,11 @@ from "dbo"."tbl_Log_Email" "tbl_Log_Email"
     </command>
   </commands>
   <fields>
-    <field name="EmailLogID" type="Int32" allowNulls="false" label="email Log ID" readOnly="true" showInSummary="true" />
-    <field name="AppName" type="String" label="App Name" length="100" showInSummary="true" />
-    <field name="EmailFrom" type="String" label="email From" length="100" showInSummary="true" />
-    <field name="EmailTo" type="String" allowQBE="false" allowSorting="false" label="email To" length="2000" showInSummary="true" />
-    <field name="EmailCc" type="String" allowQBE="false" allowSorting="false" label="email CC" length="2000" showInSummary="true" />
+    <field name="EmailLogID" type="Int32" allowNulls="false" label="email Log ID" readOnly="true" isPrimaryKey="true" />
+    <field name="AppName" type="String" label="App Name" length="100" />
+    <field name="EmailFrom" type="String" label="email From" length="100" />
+    <field name="EmailTo" type="String" allowQBE="false" allowSorting="false" label="email To" length="2000" />
+    <field name="EmailCc" type="String" allowQBE="false" allowSorting="false" label="email CC" length="2000" />
     <field name="EmailBcc" type="String" label="email BCC" length="500" />
     <field name="EmailSubject" type="String" label="email Subject" length="500" />
     <field name="EmailBody" type="String" allowQBE="false" allowSorting="false" label="email Body" />
@@ -52,7 +52,7 @@ from "dbo"."tbl_Log_Email" "tbl_Log_Email"
         <dataField fieldName="EmailHost" />
       </dataFields>
     </view>
-    <view id="editForm1" type="Form" commandId="command1" label="Review Tbl Log Email">
+    <view id="editForm1" type="Form" commandId="command1" label="Email Log" tags="reading-pane-none content-stub-none">
       <headerText>$DefaultEditViewDescription</headerText>
       <categories>
         <category id="c1" headerText="Tbl Log Email" flow="NewColumn">
@@ -105,8 +105,7 @@ from "dbo"."tbl_Log_Email" "tbl_Log_Email"
     <actionGroup id="ag2" scope="Form">
       <action id="a1" commandName="Edit" whenView="editForm1" />
       <action id="a2" commandName="Delete" whenView="editForm1" />
-      <action id="a3" commandName="Cancel" />
-      <action id="a15" whenView="requestDetailForm" commandName="Cancel" headerText="Close" />
+      <action id="a3" commandName="Cancel" headerText="Close" />
       <action id="a4" whenLastCommandName="Edit" commandName="Update" commandArgument="Save" />
       <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
       <action id="a6" whenLastCommandName="New" commandName="Insert" commandArgument="Save" />

@@ -290,6 +290,18 @@
       <Index>1030</Index>
     </update>
   </c>
+  <c y="NodeSet" t="2026-10-29T12:26:00.0000000Z">
+    <page name="TblLogActivity" />
+    <update>
+      <CustomStyle>Wide</CustomStyle>
+    </update>
+  </c>
+  <c y="NodeSet" t="2026-10-29T12:26:01.0000000Z">
+    <page name="TblLogEmail" />
+    <update>
+      <CustomStyle>Wide</CustomStyle>
+    </update>
+  </c>
 </log>
   <log type="Application">
     <c y="NodeSet" t="2026-10-27T06:43:56.3491041Z">
@@ -387,6 +399,18 @@
       <Title>Email Log</Title>
       <Path>Email Log</Path>
       <Index>1030</Index>
+    </update>
+  </c>
+  <c y="NodeSet" t="2026-10-29T12:26:00.0000000Z">
+    <page name="TblLogActivity" />
+    <update>
+      <CustomStyle>Wide</CustomStyle>
+    </update>
+  </c>
+  <c y="NodeSet" t="2026-10-29T12:26:01.0000000Z">
+    <page name="TblLogEmail" />
+    <update>
+      <CustomStyle>Wide</CustomStyle>
     </update>
   </c>
 </log>
