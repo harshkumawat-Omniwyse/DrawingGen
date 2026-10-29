@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <logs>
   <log type="Controllers">
     <c y="NodeSet" t="2026-10-27T08:36:57.1391709Z">
@@ -315,6 +315,77 @@
       <Name>ReportIssue</Name>
       <Container>container1</Container>
     </insert>
+  </c>
+  <c y="NodeSet" t="2026-10-29T13:30:00.0000000Z">
+    <controller name="TblDwggenRequestqueue" />
+    <update>
+      <StatusBar>SubStatusText: Request Submitted
+[Request Submitted] &gt; Caller &gt; AutoCAD &gt; SAP &gt; File Transfer &gt; DWG Download Email &gt;
+
+SubStatusText: Caller
+Request Submitted &gt; [Caller] &gt; AutoCAD &gt; SAP &gt; File Transfer &gt; DWG Download Email &gt;
+
+SubStatusText: AutoCAD Processing
+Request Submitted &gt; Caller &gt; [AutoCAD] &gt; SAP &gt; File Transfer &gt; DWG Download Email &gt;
+
+SubStatusText: AutoCAD
+Request Submitted &gt; Caller &gt; [AutoCAD] &gt; SAP &gt; File Transfer &gt; DWG Download Email &gt;
+
+SubStatusText: AutoCAD Failed
+Request Submitted &gt; Caller &gt; [AutoCAD Process Failed] &gt; SAP &gt; File Transfer &gt; DWG Download Email &gt;
+
+SubStatusText: AutoCAD Process Failed
+Request Submitted &gt; Caller &gt; [AutoCAD Process Failed] &gt; SAP &gt; File Transfer &gt; DWG Download Email &gt;
+
+SubStatusText: AutoCAD Completed
+Request Submitted &gt; Caller &gt; AutoCAD &gt; [SAP Processing] &gt; File Transfer &gt; DWG Download Email &gt;
+
+SubStatusText: Input Files Sent to SAP
+Request Submitted &gt; Caller &gt; AutoCAD &gt; [SAP Processing] &gt; File Transfer &gt; DWG Download Email &gt;
+
+SubStatusText: SAP
+Request Submitted &gt; Caller &gt; AutoCAD &gt; [SAP Processing] &gt; File Transfer &gt; DWG Download Email &gt;
+
+SubStatusText: SAP Processing
+Request Submitted &gt; Caller &gt; AutoCAD &gt; [SAP Processing] &gt; File Transfer &gt; DWG Download Email &gt;
+
+SubStatusText: File Transfer
+Request Submitted &gt; Caller &gt; AutoCAD &gt; SAP &gt; [File Transfer] &gt; DWG Download Email &gt;
+
+SubStatusText: DWG Download Email Sent
+Request Submitted &gt; Caller &gt; AutoCAD &gt; SAP &gt; File Transfer &gt; [DWG Download Email Sent] &gt;
+
+SubStatusText: DWG Download Email
+Request Submitted &gt; Caller &gt; AutoCAD &gt; SAP &gt; File Transfer &gt; [DWG Download Email Sent] &gt;
+
+SubStatusText: *
+[Request Submitted] &gt; Caller &gt; AutoCAD &gt; SAP &gt; File Transfer &gt; DWG Download Email &gt;
+</StatusBar>
+    </update>
+  </c>
+  <c y="NodeSet" t="2026-10-29T13:30:01.0000000Z">
+    <controller name="TblDwggenRequestqueue" />
+    <view id="requestDetailForm" />
+    <category id="c2" />
+    <update>
+      <Wizard />
+    </update>
+  </c>
+  <c y="NodeSet" t="2026-10-29T13:30:02.0000000Z">
+    <controller name="TblDwggenRequestqueue" />
+    <view id="requestDetailForm" />
+    <category id="c3" />
+    <update>
+      <Wizard />
+    </update>
+  </c>
+  <c y="NodeSet" t="2026-10-29T13:30:03.0000000Z">
+    <controller name="TblDwggenRequestqueue" />
+    <view id="requestDetailForm" />
+    <category id="c1" />
+    <update>
+      <Wizard />
+    </update>
   </c>
 </log>
   <log type="Application">

@@ -45,9 +45,14 @@ select
 		ELSE 'Processing'
 	 END "StatusText"
 	,CASE
-		WHEN "tbl_dwgGen_RequestQueue"."dateEmailSent" IS NOT NULL THEN 'DWG Download Email'
+		WHEN "tbl_dwgGen_RequestQueue"."tactonTransitionStatus" IS NOT NULL
+			AND LTRIM(RTRIM("tbl_dwgGen_RequestQueue"."tactonTransitionStatus")) <> ''
+			THEN "tbl_dwgGen_RequestQueue"."tactonTransitionStatus"
+		WHEN "tbl_dwgGen_RequestQueue"."dateDWGGenFailed" IS NOT NULL THEN 'AutoCAD Failed'
+		WHEN "tbl_dwgGen_RequestQueue"."dateEmailSent" IS NOT NULL THEN 'DWG Download Email Sent'
 		WHEN "tbl_dwgGen_RequestQueue"."dateSAPFileAllCompleted" IS NOT NULL THEN 'File Transfer'
-		WHEN "tbl_dwgGen_RequestQueue"."dateSAPFirstFileReceived" IS NOT NULL THEN 'SAP'
+		WHEN "tbl_dwgGen_RequestQueue"."dateSAPFirstFileReceived" IS NOT NULL THEN 'Input Files Sent to SAP'
+		WHEN "tbl_dwgGen_RequestQueue"."dateDWGGenAllCompleted" IS NOT NULL THEN 'AutoCAD Completed'
 		WHEN "tbl_dwgGen_RequestQueue"."dateDWGGenStarted" IS NOT NULL THEN 'AutoCAD Processing'
 		WHEN "tbl_dwgGen_RequestQueue"."dateTactonUploadStarted" IS NOT NULL
 			OR "tbl_dwgGen_RequestQueue"."dateTactonUploadCompleted" IS NOT NULL THEN 'Caller'
@@ -201,7 +206,7 @@ from "dbo"."tbl_dwgGen_RequestQueue" "tbl_dwgGen_RequestQueue"
     <view id="requestDetailForm" commandId="command1" type="Form" label="Request" tags="reading-pane-none content-stub-none">
       <headerText>Request</headerText>
       <categories>
-        <category headerText="Details" wizard="Request Submitted" id="c2" flow="NewColumn">
+        <category headerText="Details" id="c2" flow="NewColumn">
           <dataFields>
             <dataField fieldName="RequestID" columns="15">
               <headerText>Request number</headerText>
@@ -220,7 +225,7 @@ from "dbo"."tbl_dwgGen_RequestQueue" "tbl_dwgGen_RequestQueue"
             </dataField>
           </dataFields>
         </category>
-        <category headerText="Requester" wizard="Caller" id="c3">
+        <category headerText="Requester" id="c3">
           <dataFields>
             <dataField fieldName="RequesterUserName">
               <headerText>Requester</headerText>
@@ -248,7 +253,7 @@ from "dbo"."tbl_dwgGen_RequestQueue" "tbl_dwgGen_RequestQueue"
             </dataField>
           </dataFields>
         </category>
-        <category headerText="SALES REP" wizard="AutoCAD" id="c1">
+        <category headerText="SALES REP" id="c1">
           <dataFields>
             <dataField fieldName="SalesRepName">
               <headerText>Sales Rep Name</headerText>
@@ -261,9 +266,9 @@ from "dbo"."tbl_dwgGen_RequestQueue" "tbl_dwgGen_RequestQueue"
             </dataField>
           </dataFields>
         </category>
-        <category headerText="Dates " wizard="SAP Processing" id="c4" />
-        <category headerText="CYCLE TIME IN MINUTES" wizard="File Transfer" id="c5" />
-        <category headerText="OTHERS" wizard="DWG Download Email" id="c6" />
+        <category headerText="Dates " id="c4" />
+        <category headerText="CYCLE TIME IN MINUTES" id="c5" />
+        <category headerText="OTHERS" id="c6" />
         <category headerText="AUTOCAD FILES" id="c7" />
         <category headerText="MASTER JSON" id="c8" />
       </categories>
@@ -329,4 +334,47 @@ from "dbo"."tbl_dwgGen_RequestQueue" "tbl_dwgGen_RequestQueue"
     <actionGroup id="ag100" scope="ActionBar" flat="false" />
     <actionGroup id="ag101" scope="ActionBar" flat="false" />
   </actions>
+  <statusBar><![CDATA[
+SubStatusText: Request Submitted
+[Request Submitted] > Caller > AutoCAD > SAP > File Transfer > DWG Download Email >
+
+SubStatusText: Caller
+Request Submitted > [Caller] > AutoCAD > SAP > File Transfer > DWG Download Email >
+
+SubStatusText: AutoCAD Processing
+Request Submitted > Caller > [AutoCAD] > SAP > File Transfer > DWG Download Email >
+
+SubStatusText: AutoCAD
+Request Submitted > Caller > [AutoCAD] > SAP > File Transfer > DWG Download Email >
+
+SubStatusText: AutoCAD Failed
+Request Submitted > Caller > [AutoCAD Process Failed] > SAP > File Transfer > DWG Download Email >
+
+SubStatusText: AutoCAD Process Failed
+Request Submitted > Caller > [AutoCAD Process Failed] > SAP > File Transfer > DWG Download Email >
+
+SubStatusText: AutoCAD Completed
+Request Submitted > Caller > AutoCAD > [SAP Processing] > File Transfer > DWG Download Email >
+
+SubStatusText: Input Files Sent to SAP
+Request Submitted > Caller > AutoCAD > [SAP Processing] > File Transfer > DWG Download Email >
+
+SubStatusText: SAP
+Request Submitted > Caller > AutoCAD > [SAP Processing] > File Transfer > DWG Download Email >
+
+SubStatusText: SAP Processing
+Request Submitted > Caller > AutoCAD > [SAP Processing] > File Transfer > DWG Download Email >
+
+SubStatusText: File Transfer
+Request Submitted > Caller > AutoCAD > SAP > [File Transfer] > DWG Download Email >
+
+SubStatusText: DWG Download Email Sent
+Request Submitted > Caller > AutoCAD > SAP > File Transfer > [DWG Download Email Sent] >
+
+SubStatusText: DWG Download Email
+Request Submitted > Caller > AutoCAD > SAP > File Transfer > [DWG Download Email Sent] >
+
+SubStatusText: *
+[Request Submitted] > Caller > AutoCAD > SAP > File Transfer > DWG Download Email >
+]]></statusBar>
 </dataController>
