@@ -1,0 +1,285 @@
+<!doctype html>
+<html>
+<body>
+
+<style>
+.ri-page{text-align:center;padding:60px 20px;}
+.ri-page h2{font-size:1.4rem;font-weight:600;color:#222;margin:0 0 12px;}
+.ri-page p{font-size:.95rem;color:#555;margin:0 0 32px;}
+.ri-btn-open{background:#e8a735;color:#fff;border:none;padding:14px 52px;font-size:1rem;font-weight:500;cursor:pointer;border-radius:2px;transition:background .2s;}
+.ri-btn-open:hover{background:#d4961f;}
+.ri-overlay{display:none;position:fixed;top:0;left:0;right:0;bottom:0;background:rgba(0,0,0,.45);z-index:9000;overflow-y:auto;padding:40px 16px;box-sizing:border-box;}
+.ri-dialog{background:#fff;width:100%;max-width:680px;margin:0 auto;border-radius:2px;box-shadow:0 4px 24px rgba(0,0,0,.3);}
+.ri-dialog-body{padding:24px 28px 8px;}
+.ri-info-banner{display:flex;align-items:center;gap:14px;border:1px solid #4a90d9;border-radius:2px;padding:14px 16px;margin-bottom:24px;background:#f4f9ff;}
+.ri-info-icon{flex-shrink:0;width:34px;height:34px;background:#2e6da4;border-radius:3px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:1.1rem;font-weight:700;}
+.ri-info-banner span{font-size:.95rem;color:#333;}
+.ri-form-row{display:flex;align-items:flex-start;margin-bottom:16px;gap:12px;}
+.ri-form-row label{width:100px;min-width:100px;text-align:right;padding-top:6px;font-size:.9rem;color:#444;flex-shrink:0;}
+.ri-form-row .req{color:#c0392b;margin-left:2px;}
+.ri-field{flex:1;}
+.ri-input,.ri-short-input{border:1px solid #bbb;border-radius:1px;padding:6px 8px;font-size:.9rem;color:#333;box-sizing:border-box;outline:none;transition:border-color .15s;}
+.ri-input{width:100%;}
+.ri-short-input{width:200px;}
+.ri-input:focus,.ri-short-input:focus{border-color:#4a90d9;}
+.ri-input.ri-error{border-color:#c0392b;}
+.ri-priority-wrap{display:flex;align-items:center;gap:8px;}
+.ri-priority-dot{display:inline-block;width:12px;height:12px;border-radius:50%;background:#e8a735;flex-shrink:0;}
+.ri-select-wrap{position:relative;display:inline-flex;align-items:center;gap:4px;}
+.ri-select{-webkit-appearance:none;appearance:none;border:1px solid #bbb;border-radius:2px;padding:5px 24px 5px 8px;font-size:.9rem;color:#333;background:#fff;cursor:pointer;min-width:160px;outline:none;}
+.ri-select:focus{border-color:#4a90d9;}
+.ri-select-arrow{position:absolute;right:8px;pointer-events:none;color:#666;font-size:.75rem;}
+.ri-help-icon{width:20px;height:20px;border:2px solid #888;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:.72rem;font-weight:700;color:#666;cursor:default;flex-shrink:0;user-select:none;}
+.ri-components-val{padding-top:6px;font-size:.9rem;color:#333;font-weight:500;}
+.ri-rte-wrap{border:1px solid #bbb;border-radius:2px;overflow:hidden;}
+.ri-rte-toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:2px;padding:4px 6px;background:#f5f5f5;border-bottom:1px solid #ddd;}
+.ri-rte-toolbar button,.ri-rte-toolbar select{background:none;border:1px solid transparent;border-radius:2px;padding:3px 6px;font-size:.8rem;cursor:pointer;color:#444;outline:none;line-height:1.2;font-family:inherit;}
+.ri-rte-toolbar button:hover{background:#ddd;border-color:#bbb;}
+.ri-tb-sep{width:1px;height:18px;background:#ccc;margin:0 3px;display:inline-block;}
+.ri-tb-bold{font-weight:700!important;}
+.ri-tb-italic{font-style:italic!important;}
+.ri-tb-under{text-decoration:underline!important;}
+.ri-tb-color{color:#c0392b!important;text-decoration:underline!important;}
+.ri-rte-toolbar select{border:1px solid #bbb;padding:2px 4px;font-size:.8rem;}
+.ri-rte-body{min-height:160px;padding:8px;font-size:.9rem;color:#333;outline:none;line-height:1.5;background:#fff;}
+.ri-rte-footer{display:flex;align-items:center;gap:6px;margin-top:4px;}
+.ri-expand-icon{width:20px;height:20px;border:1px solid #aaa;border-radius:2px;display:inline-flex;align-items:center;justify-content:center;font-size:.7rem;color:#666;cursor:pointer;user-select:none;}
+.ri-dialog-footer{display:flex;justify-content:flex-end;gap:8px;padding:14px 20px;background:#e8e8e8;border-top:1px solid #ccc;}
+.ri-btn-submit{background:#2e6da4;color:#fff;border:none;padding:8px 22px;font-size:.9rem;border-radius:2px;cursor:pointer;font-weight:500;transition:background .2s;}
+.ri-btn-submit:hover{background:#235a8a;}
+.ri-btn-close{background:#fff;color:#333;border:1px solid #bbb;padding:8px 22px;font-size:.9rem;border-radius:2px;cursor:pointer;transition:background .2s;}
+.ri-btn-close:hover{background:#f0f0f0;}
+.ri-success{display:none;text-align:center;padding:40px 28px;}
+.ri-success-icon{font-size:3rem;color:#27ae60;margin-bottom:12px;}
+.ri-success h3{font-size:1.2rem;color:#222;margin:0 0 8px;}
+.ri-success p{font-size:.9rem;color:#666;margin:0;}
+</style>
+
+<!-- Page intro -->
+<div class="ri-page">
+  <h2>Click the below link to submit the feedback.</h2>
+  <p>Admin team will review the issue and get back to you with update.</p>
+  <button class="ri-btn-open" onclick="riOpen()">Submit feedback</button>
+</div>
+
+<!-- Modal overlay — hidden by default -->
+<div class="ri-overlay" id="riOverlay" onclick="riBackdrop(event)">
+  <div class="ri-dialog" id="riDialog">
+
+    <!-- Form -->
+    <div class="ri-dialog-body" id="riFormSection">
+      <div class="ri-info-banner">
+        <div class="ri-info-icon">i</div>
+        <span>Please provide your feedback below:</span>
+      </div>
+
+      <!-- Summary -->
+      <div class="ri-form-row">
+        <label>Summary<span class="req">*</span></label>
+        <div class="ri-field">
+          <input type="text" class="ri-input" id="riSummary" autocomplete="off">
+        </div>
+      </div>
+
+      <!-- Priority -->
+      <div class="ri-form-row">
+        <label>Priority</label>
+        <div class="ri-field">
+          <div class="ri-priority-wrap">
+            <div class="ri-select-wrap">
+              <span class="ri-priority-dot" id="riPriorityDot"></span>
+              <select class="ri-select" id="riPriority" onchange="riDot()">
+                <option value="highest" data-color="#c0392b">Highest</option>
+                <option value="high"    data-color="#e67e22">High</option>
+                <option value="medium"  data-color="#e8a735" selected>Medium</option>
+                <option value="low"     data-color="#27ae60">Low</option>
+                <option value="lowest"  data-color="#2e86c1">Lowest</option>
+              </select>
+              <span class="ri-select-arrow">&#9662;</span>
+            </div>
+            <span class="ri-help-icon" title="Priority levels">?</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Attach file -->
+      <div class="ri-form-row">
+        <label>Attach file</label>
+        <div class="ri-field">
+          <input type="file" id="riFile" multiple>
+        </div>
+      </div>
+
+      <!-- Components -->
+      <div class="ri-form-row">
+        <label>Components</label>
+        <div class="ri-field">
+          <span class="ri-components-val">None</span>
+        </div>
+      </div>
+
+      <!-- Description -->
+      <div class="ri-form-row" style="align-items:flex-start;">
+        <label style="padding-top:4px;">Description</label>
+        <div class="ri-field">
+          <div class="ri-rte-wrap">
+            <div class="ri-rte-toolbar">
+              <select onchange="riCmd('formatBlock',this.value);this.selectedIndex=0;">
+                <option value="">Style</option>
+                <option value="p">Paragraph</option>
+                <option value="h1">Heading 1</option>
+                <option value="h2">Heading 2</option>
+                <option value="h3">Heading 3</option>
+                <option value="pre">Preformatted</option>
+              </select>
+              <span class="ri-tb-sep"></span>
+              <button class="ri-tb-bold"   title="Bold"      onclick="riCmd('bold')">B</button>
+              <button class="ri-tb-italic" title="Italic"    onclick="riCmd('italic')">I</button>
+              <button class="ri-tb-under"  title="Underline" onclick="riCmd('underline')">U</button>
+              <span class="ri-tb-sep"></span>
+              <button class="ri-tb-color" title="Font color" onclick="document.getElementById('riColorPick').click()">A &#9662;</button>
+              <input type="color" id="riColorPick" style="display:none;width:0;height:0;padding:0;border:0;" oninput="riCmd('foreColor',this.value)">
+              <button title="Font size" onclick="riToggleSize()">&#7424;A &#9662;</button>
+              <select id="riSizeSel" style="display:none;" onchange="riCmd('fontSize',this.value);this.style.display='none';">
+                <option value="1">8pt</option>
+                <option value="2">10pt</option>
+                <option value="3" selected>12pt</option>
+                <option value="4">14pt</option>
+                <option value="5">18pt</option>
+                <option value="6">24pt</option>
+                <option value="7">36pt</option>
+              </select>
+              <span class="ri-tb-sep"></span>
+              <button title="Insert link" onclick="riLink()">&#128279; &#9662;</button>
+              <span class="ri-tb-sep"></span>
+              <button title="Bullet list"   onclick="riCmd('insertUnorderedList')">&#8226;&#8212;</button>
+              <button title="Numbered list" onclick="riCmd('insertOrderedList')">1&#8212;</button>
+              <span class="ri-tb-sep"></span>
+              <button title="Emoji"  onclick="return false;">&#128578; &#9662;</button>
+              <button title="More"   onclick="return false;">+ &#9662;</button>
+              <button title="Collapse toolbar" style="margin-left:auto;" onclick="riToggleTb()">&#8963;</button>
+            </div>
+            <div class="ri-rte-body" id="riDesc" contenteditable="true"></div>
+          </div>
+          <div class="ri-rte-footer">
+            <span class="ri-expand-icon" title="Expand editor" onclick="riExpand()">&#8597;</span>
+            <span class="ri-help-icon" title="Rich text help">?</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Name -->
+      <div class="ri-form-row">
+        <label>Name</label>
+        <div class="ri-field">
+          <input type="text" class="ri-short-input" id="riName" autocomplete="name">
+        </div>
+      </div>
+
+      <!-- Email -->
+      <div class="ri-form-row" style="margin-bottom:24px;">
+        <label>Email</label>
+        <div class="ri-field">
+          <input type="email" class="ri-short-input" id="riEmail" autocomplete="email">
+        </div>
+      </div>
+    </div>
+
+    <!-- Success message -->
+    <div class="ri-success" id="riSuccess">
+      <div class="ri-success-icon">&#10003;</div>
+      <h3>Feedback submitted</h3>
+      <p>Thank you. The admin team will review the issue and get back to you with an update.</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="ri-dialog-footer">
+      <button class="ri-btn-submit" id="riBtnSubmit" onclick="riSubmit()">Submit</button>
+      <button class="ri-btn-close" onclick="riClose()">Close</button>
+    </div>
+  </div>
+</div>
+
+<script>
+(function () {
+  // Hide overlay on load — belt-and-suspenders in case CSS isn't applied yet
+  var ov = document.getElementById('riOverlay');
+  if (ov) ov.style.display = 'none';
+
+  window.riOpen = function () {
+    var overlay = document.getElementById('riOverlay');
+    overlay.style.display = 'block';
+    document.getElementById('riFormSection').style.display = '';
+    document.getElementById('riSuccess').style.display = 'none';
+    document.getElementById('riBtnSubmit').style.display = '';
+    setTimeout(function () { document.getElementById('riSummary').focus(); }, 50);
+  };
+
+  window.riClose = function () {
+    document.getElementById('riOverlay').style.display = 'none';
+  };
+
+  window.riBackdrop = function (e) {
+    if (e.target === document.getElementById('riOverlay')) riClose();
+  };
+
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') riClose();
+  });
+
+  window.riDot = function () {
+    var sel = document.getElementById('riPriority');
+    var color = sel.options[sel.selectedIndex].getAttribute('data-color') || '#e8a735';
+    document.getElementById('riPriorityDot').style.background = color;
+  };
+
+  window.riCmd = function (cmd, val) {
+    document.getElementById('riDesc').focus();
+    document.execCommand(cmd, false, val || null);
+  };
+
+  window.riLink = function () {
+    var url = prompt('Enter URL:', 'https://');
+    if (url) riCmd('createLink', url);
+  };
+
+  window.riToggleTb = function () {
+    var tb = document.querySelector('.ri-rte-toolbar');
+    tb.style.display = tb.style.display === 'none' ? '' : 'none';
+  };
+
+  window.riToggleSize = function () {
+    var s = document.getElementById('riSizeSel');
+    s.style.display = s.style.display === 'none' ? 'inline-block' : 'none';
+  };
+
+  window.riExpand = function () {
+    var b = document.getElementById('riDesc');
+    b.style.minHeight = b.style.minHeight === '320px' ? '160px' : '320px';
+  };
+
+  window.riSubmit = function () {
+    var s = document.getElementById('riSummary');
+    if (!s.value.trim()) {
+      s.classList.add('ri-error');
+      s.focus();
+      return;
+    }
+    s.classList.remove('ri-error');
+    document.getElementById('riFormSection').style.display = 'none';
+    document.getElementById('riSuccess').style.display = 'block';
+    document.getElementById('riBtnSubmit').style.display = 'none';
+    // reset fields
+    s.value = '';
+    document.getElementById('riPriority').selectedIndex = 2;
+    riDot();
+    document.getElementById('riFile').value = '';
+    document.getElementById('riDesc').innerHTML = '';
+    document.getElementById('riName').value = '';
+    document.getElementById('riEmail').value = '';
+  };
+}());
+</script>
+
+</body>
+</html>
