@@ -302,6 +302,20 @@
       <CustomStyle>Wide</CustomStyle>
     </update>
   </c>
+  <c y="NodeSet" t="2026-10-29T12:50:00.0000000Z">
+    <page name="ReportIssue" />
+    <update>
+      <CustomStyle>Wide</CustomStyle>
+    </update>
+  </c>
+  <c y="NodeSet" t="2026-10-29T12:50:01.0000000Z">
+    <page name="ReportIssue" />
+    <insert type="control">
+      <ControlId>control1</ControlId>
+      <Name>ReportIssue</Name>
+      <Container>container1</Container>
+    </insert>
+  </c>
 </log>
   <log type="Application">
     <c y="NodeSet" t="2026-10-27T06:43:56.3491041Z">
@@ -412,6 +426,20 @@
     <update>
       <CustomStyle>Wide</CustomStyle>
     </update>
+  </c>
+  <c y="NodeSet" t="2026-10-29T12:50:00.0000000Z">
+    <page name="ReportIssue" />
+    <update>
+      <CustomStyle>Wide</CustomStyle>
+    </update>
+  </c>
+  <c y="NodeSet" t="2026-10-29T12:50:01.0000000Z">
+    <page name="ReportIssue" />
+    <insert type="control">
+      <ControlId>control1</ControlId>
+      <Name>ReportIssue</Name>
+      <Container>container1</Container>
+    </insert>
   </c>
 </log>
 </logs>
