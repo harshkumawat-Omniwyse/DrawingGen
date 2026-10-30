@@ -271,7 +271,7 @@
       <Title>Request Queue</Title>
       <Path>Request Queue</Path>
       <Index>1010</Index>
-      <CustomStyle>Wide</CustomStyle>
+      <CustomStyle></CustomStyle>
     </update>
   </c>
   <c y="NodeSet" t="2026-10-28T18:10:03.0000000Z">
@@ -293,13 +293,13 @@
   <c y="NodeSet" t="2026-10-29T12:26:00.0000000Z">
     <page name="TblLogActivity" />
     <update>
-      <CustomStyle>Wide</CustomStyle>
+      <CustomStyle></CustomStyle>
     </update>
   </c>
   <c y="NodeSet" t="2026-10-29T12:26:01.0000000Z">
     <page name="TblLogEmail" />
     <update>
-      <CustomStyle>Wide</CustomStyle>
+      <CustomStyle></CustomStyle>
     </update>
   </c>
   <c y="NodeSet" t="2026-10-29T12:50:00.0000000Z">
@@ -467,7 +467,7 @@ SubStatusText: *
       <Title>Request Queue</Title>
       <Path>Request Queue</Path>
       <Index>1010</Index>
-      <CustomStyle>Wide</CustomStyle>
+      <CustomStyle></CustomStyle>
     </update>
   </c>
   <c y="NodeSet" t="2026-10-28T18:10:03.0000000Z">
@@ -489,13 +489,13 @@ SubStatusText: *
   <c y="NodeSet" t="2026-10-29T12:26:00.0000000Z">
     <page name="TblLogActivity" />
     <update>
-      <CustomStyle>Wide</CustomStyle>
+      <CustomStyle></CustomStyle>
     </update>
   </c>
   <c y="NodeSet" t="2026-10-29T12:26:01.0000000Z">
     <page name="TblLogEmail" />
     <update>
-      <CustomStyle>Wide</CustomStyle>
+      <CustomStyle></CustomStyle>
     </update>
   </c>
   <c y="NodeSet" t="2026-10-29T12:50:00.0000000Z">

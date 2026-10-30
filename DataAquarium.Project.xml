@@ -14,7 +14,7 @@
     <blob allowUploadOnInsert="true" />
     <framework scriptOnly="true" useExtenders="false" />
     <grid actionColumn="false" />
-    <touch desktopDisplayDensity="Condensed" mobileDisplayDensity="Auto" transitions="" sidebar="Landscape" labelsInList="DisplayedBelow" initialListMode="SeeAll" menu="toolbar" promoteActions="true" smartDates="true" mapApiIdentifier="" mapApiIdentifierMobile="" />
+    <touch desktopDisplayDensity="Condensed" mobileDisplayDensity="Auto" transitions="" sidebar="Always" labelsInList="DisplayedBelow" initialListMode="SeeAll" menu="toolbar" promoteActions="true" smartDates="true" mapApiIdentifier="" mapApiIdentifierMobile="" />
     <cms searchEngine="" analysisEngine="" analysisOnDataPages="false" />
     <ease urlHashing="false">
       <auditing></auditing>

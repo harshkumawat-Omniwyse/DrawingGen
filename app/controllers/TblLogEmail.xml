@@ -33,7 +33,7 @@ from "dbo"."tbl_Log_Email" "tbl_Log_Email"
     <field name="EmailBcc" type="String" label="email BCC" length="500" />
     <field name="EmailSubject" type="String" label="email Subject" length="500" />
     <field name="EmailBody" type="String" allowQBE="false" allowSorting="false" label="email Body" />
-    <field name="EmailSentDate" type="DateTime" dataFormatString="g" label="email Sent Date" />
+    <field name="EmailSentDate" type="DateTime" dataFormatString="g" label="Email Sent Date" />
     <field name="EmailHost" type="String" label="email Host" length="100" />
   </fields>
   <views>
@@ -48,7 +48,7 @@ from "dbo"."tbl_Log_Email" "tbl_Log_Email"
         <dataField fieldName="EmailBcc" />
         <dataField fieldName="EmailSubject" />
         <dataField fieldName="EmailBody" rows="5" />
-        <dataField fieldName="EmailSentDate" columns="20" />
+        <dataField fieldName="EmailSentDate" columns="20" tag="calendar-date" />
         <dataField fieldName="EmailHost" />
       </dataFields>
     </view>

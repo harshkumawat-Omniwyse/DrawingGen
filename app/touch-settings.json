@@ -1,3 +1,15 @@
 {
-  "appName": "DWG GEN AUTOMATION ADMIN DASHBOARD"
+  "appName": "DWG GEN AUTOMATION ADMIN DASHBOARD",
+  "ui": {
+    "sidebar": {
+      "when": "Always",
+      "mini": false,
+      "views": {
+        "styles": true
+      }
+    },
+    "readingPane": {
+      "enabled": false
+    }
+  }
 }

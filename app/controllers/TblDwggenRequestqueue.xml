@@ -72,28 +72,28 @@ from "dbo"."tbl_dwgGen_RequestQueue" "tbl_dwgGen_RequestQueue"
     <field name="StatusText" type="String" readOnly="true" label="Status" computed="true" />
     <field name="SubStatusText" type="String" readOnly="true" label="Sub-status" computed="true" />
     <field name="RequestID" type="Int32" allowNulls="false" label="Number" readOnly="true" isPrimaryKey="true" />
-    <field name="RequesterUserName" type="String" allowNulls="false" label="requester User Name" length="100" />
-    <field name="RequesterCompany" type="String" label="requester Company" length="100" />
+    <field name="RequesterUserName" type="String" allowNulls="false" label="Requester" length="100" />
+    <field name="RequesterCompany" type="String" label="Requester Company" length="100" />
     <field name="RequesterEmail" type="String" label="requester Email" length="100" />
     <field name="SalesRepName" type="String" label="Sales Rep Name" length="100" />
     <field name="SalesRepCompany" type="String" label="Sales Rep Company" length="100" />
     <field name="SalesRepEmail" type="String" label="Sales Rep Email" length="100" />
-    <field name="DrawingFormat" type="String" label="Drawing Format" length="70" />
+    <field name="DrawingFormat" type="String" label="Format" length="70" />
     <field name="MasterJson" type="String" allowQBE="false" allowSorting="false" label="master JSON" />
     <field name="StatusID" type="Int32" label="status ID" />
     <field name="FileNameBase" type="String" label="file Name Base" length="100" />
-    <field name="JobRequestType" type="String" label="job Request Type" length="100" />
-    <field name="SalesOrderNumber" type="String" label="sales Order Number" length="100" />
-    <field name="QuoteNumber" type="String" label="quote Number" length="100" />
+    <field name="JobRequestType" type="String" label="Type" length="100" />
+    <field name="SalesOrderNumber" type="String" label="Sales Order" length="100" />
+    <field name="QuoteNumber" type="String" label="Quote" length="100" />
     <field name="ProjectName" type="String" label="project Name" length="100" />
     <field name="CustomerName" type="String" label="customer Name" length="100" />
-    <field name="DateAddedToQueue" type="DateTime" dataFormatString="g" label="date Added To Queue" />
+    <field name="DateAddedToQueue" type="DateTime" dataFormatString="g" label="Received Date" />
     <field name="DwggenServerName" type="String" label="DWG Gen Server Name" length="200" />
     <field name="DateDwggenStarted" type="DateTime" dataFormatString="g" label="date DWG Gen Started" />
     <field name="DateDwggenAllCompleted" type="DateTime" dataFormatString="g" label="date DWG Gen All Completed" />
     <field name="DateSapfirstFileReceived" type="DateTime" dataFormatString="g" label="date SAP First File Received" />
     <field name="DateSapfileAllCompleted" type="DateTime" dataFormatString="g" label="date SAP File All Completed" />
-    <field name="DateEmailSent" type="DateTime" dataFormatString="g" label="date Email Sent" />
+    <field name="DateEmailSent" type="DateTime" dataFormatString="g" label="DWG Download Sent Date" />
     <field name="DateDwggenFailed" type="DateTime" dataFormatString="g" label="date DWG Gen Failed" />
     <field name="SourceID" type="Int32" label="Source ID" />
     <field name="DateTactonUploadStarted" type="DateTime" dataFormatString="g" label="date Tacton Upload Started" />
@@ -111,12 +111,17 @@ from "dbo"."tbl_dwgGen_RequestQueue" "tbl_dwgGen_RequestQueue"
     <view id="grid1" type="Grid" commandId="command1" label="Tbl Dwggen Requestqueue">
       <headerText>$DefaultGridViewDescription</headerText>
       <dataFields>
-        <dataField fieldName="RequestID" columns="10" />
-        <dataField fieldName="JobRequestType" />
-        <dataField fieldName="StatusText" />
-        <dataField fieldName="SubStatusText" />
-        <dataField fieldName="DateAddedToQueue" columns="20" />
-        <dataField fieldName="DateEmailSent" columns="20" />
+        <dataField fieldName="RequestID" columns="10" headerText="Number" />
+        <dataField fieldName="JobRequestType" headerText="Type" />
+        <dataField fieldName="RequesterUserName" headerText="Requester" />
+        <dataField fieldName="RequesterCompany" headerText="Requester Company" />
+        <dataField fieldName="DrawingFormat" headerText="Format" />
+        <dataField fieldName="QuoteNumber" headerText="Quote" />
+        <dataField fieldName="SalesOrderNumber" headerText="Sales Order" />
+        <dataField fieldName="StatusText" headerText="Status" />
+        <dataField fieldName="SubStatusText" headerText="Sub-status" />
+        <dataField fieldName="DateAddedToQueue" columns="20" headerText="Received Date" tag="calendar-date" />
+        <dataField fieldName="DateEmailSent" columns="20" headerText="DWG Download Sent Date" />
       </dataFields>
     </view>
     <view id="editForm1" type="Form" commandId="command1" label="Review Tbl Dwggen Requestqueue">

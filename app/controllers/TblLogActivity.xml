@@ -39,7 +39,7 @@ from "dbo"."tbl_Log_Activity" "tbl_Log_Activity"
         <dataField fieldName="ActivityID" columns="15" />
         <dataField fieldName="AppName" />
         <dataField fieldName="ActivityUser" />
-        <dataField fieldName="ActivityDate" columns="20" />
+        <dataField fieldName="ActivityDate" columns="20" tag="calendar-date" />
         <dataField fieldName="ActivityType" columns="20" />
         <dataField fieldName="ActivityDetails" />
         <dataField fieldName="OrginServer" />
