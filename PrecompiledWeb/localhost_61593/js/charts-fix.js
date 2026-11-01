@@ -142,3 +142,113 @@
         });
     }
 })();
+
+
+// Force top navbar SPX blue styling
+(function () {
+  function injectNavbarStyle() {
+    if (!document.getElementById('spx-navbar-force-style')) {
+      var st = document.createElement('style');
+      st.id = 'spx-navbar-force-style';
+      st.innerHTML = `
+/* Force Top Navbar solid SPX blue #0089ce */
+#app-bar-toolbar,
+.app-bar-toolbar,
+.ui-header.app-bar-toolbar,
+.ui-header-fixed.app-bar-toolbar,
+div#app-bar-toolbar.ui-bar-a,
+div#app-bar-toolbar {
+  background-color: #0089ce !important;
+  background: #0089ce !important;
+  background-image: none !important;
+  border-color: #0089ce !important;
+}
+#app-bar-toolbar .app-logo,
+.app-bar-toolbar .app-logo,
+#app-bar-toolbar .ui-title,
+.app-bar-toolbar .ui-title,
+#app-bar-toolbar #app-btn-menu,
+.app-bar-toolbar #app-btn-menu,
+#app-bar-toolbar .app-btn,
+.app-bar-toolbar .app-btn,
+#app-bar-toolbar .app-icon,
+.app-bar-toolbar .app-icon,
+#app-bar-toolbar .app-back-text,
+.app-bar-toolbar .app-back-text,
+#app-bar-toolbar .app-bar-heading {
+  color: #ffffff !important;
+  fill: #ffffff !important;
+  opacity: 1 !important;
+}
+#app-bar-toolbar .app-menu-strip ul li a,
+#app-bar-toolbar .app-menu-strip ul li .ui-btn,
+#app-bar-toolbar .app-menu-strip .ui-btn:not(.ui-btn-active),
+.app-bar-toolbar .app-menu-strip .ui-btn:not(.ui-btn-active),
+body:not(.app-hosted) .app-bar-toolbar .app-menu-strip .ui-btn:not(.ui-btn-active),
+body:not(.app-hosted) .ui-bar-a .app-menu-strip .ui-btn:not(.ui-btn-active) {
+  color: #ffffff !important;
+  opacity: 1 !important;
+}
+#app-bar-toolbar .app-menu-strip .ui-btn.app-selected,
+#app-bar-toolbar .app-menu-strip .ui-btn.app-selected:not(.ui-btn-active),
+#app-bar-toolbar .app-menu-strip .ui-btn.ui-btn-active,
+.app-bar-toolbar .app-menu-strip .ui-btn.app-selected,
+body:not(.app-hosted) .ui-bar-a .app-menu-strip .ui-btn.app-selected:not(.ui-btn-active) {
+  background-color: rgba(0, 0, 0, 0.25) !important;
+  color: #ffffff !important;
+}
+#app-bar-toolbar .app-menu-strip .ui-btn:hover:not(.ui-btn-active) {
+  background-color: rgba(255, 255, 255, 0.18) !important;
+  color: #ffffff !important;
+}
+/* Watermark suppression */
+.app-acc-footer, .app-copyright, #PageFooterBar, footer, footer small {
+  display: none !important;
+  visibility: hidden !important;
+}
+/* Hide duplicate banner on Report Issue */
+.pages_report_issue_html .app-page-header,
+#pages-report-issue .app-page-header,
+.ui-page:has(.ri-root-container) .app-page-header {
+  display: none !important;
+}
+`;
+      (document.head || document.documentElement).appendChild(st);
+    }
+  }
+
+  function applyNavbarDirect() {
+    injectNavbarStyle();
+    var tb = document.getElementById('app-bar-toolbar') || document.querySelector('.app-bar-toolbar');
+    if (tb) {
+      tb.style.setProperty('background-color', '#0089ce', 'important');
+      tb.style.setProperty('background', '#0089ce', 'important');
+      tb.style.setProperty('border-color', '#0089ce', 'important');
+      var items = tb.querySelectorAll('.app-menu-strip .ui-btn, .app-logo, .app-icon, .ui-title, #app-btn-menu, .app-btn, .app-back-text');
+      for (var i = 0; i < items.length; i++) {
+        var el = items[i];
+        if (el.classList.contains('app-selected') || el.classList.contains('ui-btn-active')) {
+          el.style.setProperty('background-color', 'rgba(0,0,0,0.25)', 'important');
+        }
+        el.style.setProperty('color', '#ffffff', 'important');
+      }
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', applyNavbarDirect);
+  } else {
+    applyNavbarDirect();
+  }
+  window.addEventListener('load', applyNavbarDirect);
+  setInterval(applyNavbarDirect, 150);
+
+  if (window.jQuery) {
+    jQuery(document).on('pageready.app pageinit.app panelopen.app', function () {
+      applyNavbarDirect();
+      setTimeout(applyNavbarDirect, 50);
+      setTimeout(applyNavbarDirect, 200);
+      setTimeout(applyNavbarDirect, 500);
+    });
+  }
+})();

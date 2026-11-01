@@ -1,4 +1,4 @@
-.app-bar-buttons .app-btn-more::before,
+﻿.app-bar-buttons .app-btn-more::before,
 .app-collapsible-toggle-button::before,
 .dv-action-see-all .app-btn-prev::before,
 .dv-action-see-all .app-btn-next::before,
@@ -12382,48 +12382,4 @@ body:not(.app-has-sidebar-left):not(.app-has-reading-pane) .app-reading-pane-spl
 .app-page-external {
     width: 100%;
     height: 100%;
-}
-
-
-/* Ensure top navbar is always SPX blue with high contrast */
-#app-bar-toolbar, .app-bar-toolbar {
-    background-color: #0089ce !important;
-    border-color: #0089ce !important;
-}
-
-#app-bar-toolbar .app-logo,
-.app-bar-toolbar .app-logo,
-#app-bar-toolbar .ui-title,
-.app-bar-toolbar .ui-title,
-#app-bar-toolbar .app-bar-tabs ul li span,
-.app-bar-toolbar .app-bar-tabs ul li span,
-#app-bar-toolbar .ui-btn,
-.app-bar-toolbar .ui-btn,
-#app-bar-toolbar .app-icon,
-.app-bar-toolbar .app-icon {
-    color: #ffffff !important;
-}
-
-#app-bar-toolbar .app-bar-tabs ul li.app-selected,
-.app-bar-toolbar .app-bar-tabs ul li.app-selected {
-    background-color: rgba(0, 0, 0, 0.15) !important;
-}
-
-/* Hide header banner on Report Issue so navbar remains at top without double banner */
-body:has(.ri-root-container) .app-page-header,
-.ui-page:has(.ri-root-container) .app-page-header,
-.pages_report_issue_html .app-page-header,
-#pages-report-issue .app-page-header {
-    display: none !important;
-}
-
-/* Hide watermark & trial copyright */
-.app-acc-footer, .app-copyright, #PageFooterBar, footer, footer small {
-    display: none !important;
-    visibility: hidden !important;
-}
-
-/* Hide action bar and echo toolbar on Home screen */
-#view1_echo .app-echo-toolbar, #view2_echo .app-echo-toolbar, .HomePage .app-echo-toolbar, .pages_home_html .app-echo-toolbar {
-    display: none !important;
 }

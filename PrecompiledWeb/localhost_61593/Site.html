@@ -2,6 +2,69 @@
 <html>
   <head>
     <title>Site</title>
+  <style id="navbar-force-style">
+
+      /* Always force top navigation bar to SPX blue #0089ce */
+      #app-bar-toolbar,
+      .app-bar-toolbar,
+      .ui-header-fixed.app-bar-toolbar,
+      div#app-bar-toolbar.ui-bar-a {
+        background-color: #0089ce !important;
+        background: #0089ce !important;
+        background-image: none !important;
+        border-color: #0089ce !important;
+      }
+      #app-bar-toolbar .app-logo,
+      .app-bar-toolbar .app-logo,
+      #app-bar-toolbar .ui-title,
+      .app-bar-toolbar .ui-title,
+      #app-bar-toolbar #app-btn-menu,
+      .app-bar-toolbar #app-btn-menu,
+      #app-bar-toolbar .app-btn,
+      .app-bar-toolbar .app-btn,
+      #app-bar-toolbar .app-icon,
+      .app-bar-toolbar .app-icon {
+        color: #ffffff !important;
+      }
+      .app-menu-strip ul li .ui-btn,
+      .app-menu-strip ul li a,
+      .app-menu-strip .ui-btn:not(.ui-btn-active),
+      body:not(.app-hosted) .app-bar-toolbar .app-menu-strip .ui-btn:not(.ui-btn-active),
+      body:not(.app-hosted) .ui-bar-a .app-menu-strip .ui-btn:not(.ui-btn-active) {
+        color: #ffffff !important;
+        opacity: 1 !important;
+      }
+      .app-menu-strip ul li .ui-btn.app-selected,
+      .app-menu-strip ul li .ui-btn.app-selected:not(.ui-btn-active),
+      body:not(.app-hosted) .ui-bar-a .app-menu-strip .ui-btn.app-selected:not(.ui-btn-active),
+      .ui-bar-a .app-menu-strip .ui-btn.app-selected:not(.ui-btn-active) {
+        background-color: rgba(0, 0, 0, 0.2) !important;
+        color: #ffffff !important;
+      }
+      .app-menu-strip ul li .ui-btn:hover:not(.ui-btn-active) {
+        background-color: rgba(255, 255, 255, 0.15) !important;
+        color: #ffffff !important;
+      }
+      /* Hide watermark & trial copyright */
+      .app-acc-footer, .app-copyright, #PageFooterBar, footer, footer small {
+        display: none !important;
+        visibility: hidden !important;
+      }
+      /* Hide header banner on Report Issue */
+      .pages_report_issue_html .app-page-header,
+      #pages-report-issue .app-page-header,
+      .ui-page:has(.ri-root-container) .app-page-header {
+        display: none !important;
+      }
+      /* Hide action bar and echo toolbar on Home screen */
+      #view1_echo .app-echo-toolbar,
+      #view2_echo .app-echo-toolbar,
+      .HomePage .app-echo-toolbar,
+      .pages_home_html .app-echo-toolbar {
+        display: none !important;
+      }
+
+</style>
   </head>
   <body>
     <div id="PageHeader">
