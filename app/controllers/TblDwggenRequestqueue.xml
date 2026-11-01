@@ -210,55 +210,55 @@ from "dbo"."tbl_dwgGen_RequestQueue" "tbl_dwgGen_RequestQueue"
     </view>
     <view id="requestDetailForm" commandId="command1" type="Form" label="Request" tags="reading-pane-none content-stub-none">
       <headerText>Request</headerText>
-      <categories>
-        <category headerText="Details" id="c2" flow="NewColumn">
+            <categories>
+        <category headerText="Details" id="c2" flow="NewColumn" floating="true" wrap="true">
           <dataFields>
             <dataField fieldName="RequestID" columns="15">
               <headerText>Request number</headerText>
             </dataField>
-            <dataField fieldName="JobRequestType">
-              <headerText>Request Type</headerText>
-            </dataField>
-            <dataField fieldName="DrawingFormat">
-              <headerText>Requested DWG Format</headerText>
-            </dataField>
             <dataField fieldName="StatusText">
               <headerText>Status</headerText>
+            </dataField>
+            <dataField fieldName="JobRequestType">
+              <headerText>Request Type</headerText>
             </dataField>
             <dataField fieldName="SubStatusText">
               <headerText>Sub-status</headerText>
             </dataField>
+            <dataField fieldName="DrawingFormat">
+              <headerText>Requested DWG Format</headerText>
+            </dataField>
           </dataFields>
         </category>
-        <category headerText="Requester" id="c3">
+        <category headerText="Requester" id="c3" floating="true" wrap="true">
           <dataFields>
             <dataField fieldName="RequesterUserName">
               <headerText>Requester</headerText>
             </dataField>
-            <dataField fieldName="FileNameBase">
-              <headerText>File Name Base</headerText>
-            </dataField>
-            <dataField fieldName="ProjectName">
-              <headerText>Project Name</headerText>
-            </dataField>
             <dataField fieldName="RequesterCompany">
               <headerText>Requester Company</headerText>
-            </dataField>
-            <dataField fieldName="SalesOrderNumber">
-              <headerText>Sales Order Number</headerText>
-            </dataField>
-            <dataField fieldName="CustomerName">
-              <headerText>Customer Name</headerText>
             </dataField>
             <dataField fieldName="RequesterEmail">
               <headerText>Requester Email</headerText>
             </dataField>
+            <dataField fieldName="FileNameBase">
+              <headerText>File Name Base</headerText>
+            </dataField>
+            <dataField fieldName="SalesOrderNumber">
+              <headerText>Sales Order Number</headerText>
+            </dataField>
             <dataField fieldName="QuoteNumber">
               <headerText>Quote Number</headerText>
             </dataField>
+            <dataField fieldName="ProjectName">
+              <headerText>Project Name</headerText>
+            </dataField>
+            <dataField fieldName="CustomerName">
+              <headerText>Customer Name</headerText>
+            </dataField>
           </dataFields>
         </category>
-        <category headerText="SALES REP" id="c1">
+        <category headerText="SALES REP" id="c1" floating="true" wrap="true">
           <dataFields>
             <dataField fieldName="SalesRepName">
               <headerText>Sales Rep Name</headerText>
@@ -271,11 +271,11 @@ from "dbo"."tbl_dwgGen_RequestQueue" "tbl_dwgGen_RequestQueue"
             </dataField>
           </dataFields>
         </category>
-        <category headerText="Dates " id="c4" />
-        <category headerText="CYCLE TIME IN MINUTES" id="c5" />
-        <category headerText="OTHERS" id="c6" />
-        <category headerText="AUTOCAD FILES" id="c7" />
-        <category headerText="MASTER JSON" id="c8" />
+        <category headerText="Dates " id="c4" floating="true" wrap="true" />
+        <category headerText="CYCLE TIME IN MINUTES" id="c5" floating="true" wrap="true" />
+        <category headerText="OTHERS" id="c6" floating="true" wrap="true" />
+        <category headerText="AUTOCAD FILES" id="c7" floating="true" wrap="true" />
+        <category headerText="MASTER JSON" id="c8" floating="true" wrap="true" />
       </categories>
     </view>
   </views>

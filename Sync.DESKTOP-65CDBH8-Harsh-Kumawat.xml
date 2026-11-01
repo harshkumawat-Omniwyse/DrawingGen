@@ -387,6 +387,33 @@ SubStatusText: *
       <Wizard />
     </update>
   </c>
+  <c y="NodeSet" t="2026-10-30T16:00:01.0000000Z">
+    <controller name="TblDwggenRequestqueue" />
+    <view id="requestDetailForm" />
+    <category id="c2" />
+    <update>
+      <Floating>true</Floating>
+      <Wrap>true</Wrap>
+    </update>
+  </c>
+  <c y="NodeSet" t="2026-10-30T16:00:02.0000000Z">
+    <controller name="TblDwggenRequestqueue" />
+    <view id="requestDetailForm" />
+    <category id="c3" />
+    <update>
+      <Floating>true</Floating>
+      <Wrap>true</Wrap>
+    </update>
+  </c>
+  <c y="NodeSet" t="2026-10-30T16:00:03.0000000Z">
+    <controller name="TblDwggenRequestqueue" />
+    <view id="requestDetailForm" />
+    <category id="c1" />
+    <update>
+      <Floating>true</Floating>
+      <Wrap>true</Wrap>
+    </update>
+  </c>
 </log>
   <log type="Application">
     <c y="NodeSet" t="2026-10-27T06:43:56.3491041Z">
