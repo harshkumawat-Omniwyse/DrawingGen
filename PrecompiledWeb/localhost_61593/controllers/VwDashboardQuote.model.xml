@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataModel baseSchema="dbo" baseTable="vw_Dashboard_Quote" alias="vw_Dashboard_Quote" created="2026-10-23T17:45:38" modified="2026-10-23T17:45:40" x="20" y="20" xmlns="urn:schemas-codeontime-com:data-model">
+  <foreignKeys />
+  <columns>
+    <column name="requestID" fieldName="RequestID" label="request ID" />
+    <column name="ReceivedDate" fieldName="ReceivedDate" label="Received Date" />
+    <column name="RequesterCompany" fieldName="RequesterCompany" label="Requester Company" />
+    <column name="Requester" fieldName="Requester" label="Requester" />
+    <column name="Status" fieldName="Status" label="Status" />
+  </columns>
+</dataModel>

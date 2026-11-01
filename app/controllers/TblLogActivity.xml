@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?>
-<dataController name="TblLogActivity" conflictDetection="overwriteChanges" label="Tbl Log Activity" xmlns="urn:schemas-codeontime-com:data-aquarium">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<dataController name="TblLogActivity" conflictDetection="overwriteChanges" label="Activity" xmlns="urn:schemas-codeontime-com:data-aquarium">
   <commands>
     <command id="command1" type="Text">
       <text><![CDATA[
@@ -23,61 +23,67 @@ from "dbo"."tbl_Log_Activity" "tbl_Log_Activity"
     </command>
   </commands>
   <fields>
-    <field name="ActivityID" type="Int32" allowNulls="false" label="Activity ID" readOnly="true" isPrimaryKey="true" />
-    <field name="AppName" type="String" label="App Name" length="100" />
-    <field name="ActivityUser" type="String" label="Activity User" length="100" />
-    <field name="ActivityDate" type="DateTime" dataFormatString="g" label="Activity Date" />
-    <field name="ActivityType" type="String" label="Activity Type" length="20" />
-    <field name="ActivityDetails" type="String" label="Activity Details" length="1000" />
-    <field name="OrginServer" type="String" label="Orgin Server" length="100" />
-    <field name="QueueRequestID" type="Int32" label="Queue Request ID" />
+    <field name="ActivityID" type="Int32" allowNulls="false" label="Activity ID" readOnly="true" isPrimaryKey="true" showInSummary="true" />
+    <field name="QueueRequestID" type="Int32" label="Request Number" readOnly="true" />
+    <field name="AppName" type="String" label="Application" length="100" readOnly="true" />
+    <field name="ActivityUser" type="String" label="User" length="100" readOnly="true" />
+    <field name="ActivityType" type="String" label="Type" length="20" readOnly="true" />
+    <field name="ActivityDate" type="DateTime" dataFormatString="g" label="Date" readOnly="true" />
+    <field name="OrginServer" type="String" label="Server" length="100" readOnly="true" />
+    <field name="ActivityDetails" type="String" label="Details" length="1000" readOnly="true" />
   </fields>
   <views>
-    <view id="grid1" type="Grid" commandId="command1" label="Tbl Log Activity">
+    <view id="grid1" type="Grid" commandId="command1" label="Activity Log">
       <headerText>$DefaultGridViewDescription</headerText>
       <dataFields>
-        <dataField fieldName="ActivityID" columns="15" />
-        <dataField fieldName="AppName" />
-        <dataField fieldName="ActivityUser" />
-        <dataField fieldName="ActivityDate" columns="20" tag="calendar-date" />
-        <dataField fieldName="ActivityType" columns="20" />
-        <dataField fieldName="ActivityDetails" />
-        <dataField fieldName="OrginServer" />
-        <dataField fieldName="QueueRequestID" columns="15" />
+        <dataField fieldName="ActivityID" columns="15" headerText="Activity ID" />
+        <dataField fieldName="QueueRequestID" columns="15" headerText="Request Number" />
+        <dataField fieldName="AppName" headerText="Application" />
+        <dataField fieldName="ActivityUser" headerText="User" />
+        <dataField fieldName="ActivityType" columns="20" headerText="Type" />
+        <dataField fieldName="ActivityDate" columns="20" tag="calendar-date" headerText="Date" />
+        <dataField fieldName="OrginServer" headerText="Server" />
+        <dataField fieldName="ActivityDetails" headerText="Details" />
       </dataFields>
     </view>
-    <view id="editForm1" type="Form" commandId="command1" label="Activity Log" tags="reading-pane-none content-stub-none">
-      <headerText>$DefaultEditViewDescription</headerText>
+    <view id="editForm1" type="Form" commandId="command1" label="Activity" tags="reading-pane-none content-stub-none">
+      <headerText />
       <categories>
-        <category id="c1" headerText="Tbl Log Activity" flow="NewColumn">
-          <description><![CDATA[$DefaultEditDescription]]></description>
+        <category id="c1" wrap="true" floating="true" flow="NewColumn">
           <dataFields>
-            <dataField fieldName="ActivityID" columns="15" />
-            <dataField fieldName="AppName" />
-            <dataField fieldName="ActivityUser" />
-            <dataField fieldName="ActivityDate" columns="20" />
-            <dataField fieldName="ActivityType" columns="20" />
-            <dataField fieldName="ActivityDetails" />
-            <dataField fieldName="OrginServer" />
-            <dataField fieldName="QueueRequestID" columns="15" />
+            <dataField fieldName="ActivityID" hidden="true" />
+            <dataField fieldName="QueueRequestID" columns="15" headerText="Request Number" />
+            <dataField fieldName="AppName" headerText="Application" />
+            <dataField fieldName="ActivityUser" headerText="User" />
+          </dataFields>
+        </category>
+        <category id="c2" wrap="true" floating="true" flow="NewRow">
+          <dataFields>
+            <dataField fieldName="ActivityType" columns="20" headerText="Type" />
+            <dataField fieldName="ActivityDate" columns="20" headerText="Date" />
+            <dataField fieldName="OrginServer" headerText="Server" />
+          </dataFields>
+        </category>
+        <category id="c3" wrap="true" floating="true" flow="NewRow">
+          <dataFields>
+            <dataField fieldName="ActivityDetails" headerText="Details" />
           </dataFields>
         </category>
       </categories>
     </view>
-    <view id="createForm1" type="Form" commandId="command1" label="New Tbl Log Activity">
+    <view id="createForm1" type="Form" commandId="command1" label="New Activity">
       <headerText>$DefaultCreateViewDescription</headerText>
       <categories>
         <category id="c1" flow="NewColumn">
-          <description><![CDATA[$DefaultNewDescription]]></description>
           <dataFields>
             <dataField fieldName="ActivityID" columns="15" />
-            <dataField fieldName="AppName" />
-            <dataField fieldName="ActivityUser" />
-            <dataField fieldName="ActivityDate" columns="20" />
-            <dataField fieldName="ActivityType" columns="20" />
-            <dataField fieldName="ActivityDetails" />
-            <dataField fieldName="OrginServer" />
-            <dataField fieldName="QueueRequestID" columns="15" />
+            <dataField fieldName="QueueRequestID" columns="15" headerText="Request Number" />
+            <dataField fieldName="AppName" headerText="Application" />
+            <dataField fieldName="ActivityUser" headerText="User" />
+            <dataField fieldName="ActivityType" columns="20" headerText="Type" />
+            <dataField fieldName="ActivityDate" columns="20" headerText="Date" />
+            <dataField fieldName="OrginServer" headerText="Server" />
+            <dataField fieldName="ActivityDetails" headerText="Details" />
           </dataFields>
         </category>
       </categories>
@@ -93,18 +99,7 @@ from "dbo"."tbl_Log_Activity" "tbl_Log_Activity"
       <action id="a8" commandName="Duplicate" commandArgument="createForm1" />
     </actionGroup>
     <actionGroup id="ag2" scope="Form">
-      <action id="a1" commandName="Edit" whenView="editForm1" />
-      <action id="a2" commandName="Delete" whenView="editForm1" />
       <action id="a3" commandName="Cancel" headerText="Close" />
-      <action id="a4" whenLastCommandName="Edit" commandName="Update" commandArgument="Save" />
-      <action id="a5" whenLastCommandName="Edit" commandName="Cancel" />
-      <action id="a6" whenLastCommandName="New" commandName="Insert" commandArgument="Save" />
-      <action id="a7" whenLastCommandName="New" commandName="Insert" commandArgument="SaveAndNew" />
-      <action id="a8" whenLastCommandName="New" commandName="Cancel" />
-      <action id="a9" whenLastCommandName="Duplicate" commandName="Insert" />
-      <action id="a10" whenLastCommandName="Duplicate" commandName="Cancel" />
-      <action id="a13" whenLastCommandName="Insert" whenLastCommandArgument="Save" whenView="createForm1" commandName="Select" commandArgument="editForm1" whenClientScript="this.hasDetails()" />
-      <action id="a14" whenLastCommandName="Insert" whenLastCommandArgument="SaveAndNew" commandName="New" commandArgument="createForm1" />
     </actionGroup>
     <actionGroup id="ag3" scope="ActionBar" headerText="New" flat="true">
       <action id="a1" commandName="New" commandArgument="createForm1" cssClass="NewIcon" />

@@ -46,6 +46,8 @@
 
         var shown = false;
         ["view1", "view2"].forEach(function (id) {
+            var tb = document.querySelector("#" + id + "_echo .app-echo-toolbar");
+            if (tb) tb.style.display = "none";
             var dv = $app.findDataView(id);
             if (!dv)
                 return;
@@ -106,4 +108,37 @@
         document.addEventListener("DOMContentLoaded", kick);
     else
         kick();
+})();
+
+
+// Remove trial watermark
+(function () {
+    function purgeWatermark() {
+        var selectors = ['.app-acc-footer', '#PageFooterBar', 'footer', 'footer small', '.app-copyright'];
+        selectors.forEach(function (sel) {
+            var elements = document.querySelectorAll(sel);
+            for (var i = 0; i < elements.length; i++) {
+                var el = elements[i];
+                el.innerHTML = '';
+                el.style.display = 'none';
+                el.style.visibility = 'hidden';
+            }
+        });
+    }
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', purgeWatermark);
+    } else {
+        purgeWatermark();
+    }
+    document.addEventListener('click', function () {
+        setTimeout(purgeWatermark, 10);
+        setTimeout(purgeWatermark, 100);
+        setTimeout(purgeWatermark, 300);
+    });
+    if (window.jQuery) {
+        jQuery(document).on('pageready.app pageinit.app panelopen.app', function () {
+            purgeWatermark();
+            setTimeout(purgeWatermark, 100);
+        });
+    }
 })();

@@ -1,0 +1,757 @@
+<div class="ri-root-container">
+
+<style>
+
+/* Ensure top navbar is always SPX blue with high contrast */
+#app-bar-toolbar, .app-bar-toolbar {
+    background-color: #0089ce !important;
+    border-color: #0089ce !important;
+}
+
+#app-bar-toolbar .app-logo,
+.app-bar-toolbar .app-logo,
+#app-bar-toolbar .ui-title,
+.app-bar-toolbar .ui-title,
+#app-bar-toolbar .app-bar-tabs ul li span,
+.app-bar-toolbar .app-bar-tabs ul li span,
+#app-bar-toolbar .ui-btn,
+.app-bar-toolbar .ui-btn,
+#app-bar-toolbar .app-icon,
+.app-bar-toolbar .app-icon {
+    color: #ffffff !important;
+}
+
+#app-bar-toolbar .app-bar-tabs ul li.app-selected,
+.app-bar-toolbar .app-bar-tabs ul li.app-selected {
+    background-color: rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Hide header banner on Report Issue so navbar remains at top without double banner */
+body:has(.ri-root-container) .app-page-header,
+.ui-page:has(.ri-root-container) .app-page-header,
+.pages_report_issue_html .app-page-header,
+#pages-report-issue .app-page-header {
+    display: none !important;
+}
+
+/* Hide watermark & trial copyright */
+.app-acc-footer, .app-copyright, #PageFooterBar, footer, footer small {
+    display: none !important;
+    visibility: hidden !important;
+}
+
+/* Hide action bar and echo toolbar on Home screen */
+#view1_echo .app-echo-toolbar, #view2_echo .app-echo-toolbar, .HomePage .app-echo-toolbar, .pages_home_html .app-echo-toolbar {
+    display: none !important;
+}
+
+/* Reset and Container Styles */
+.ri-root-container {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Landing Page (Screenshot 1) */
+.ri-landing {
+  text-align: center;
+  padding: 85px 20px 60px;
+  max-width: 960px;
+  margin: 0 auto;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+}
+.ri-landing-title {
+  font-size: 24px;
+  font-weight: 400;
+  color: #1e1e1e;
+  margin: 0 0 16px 0;
+  line-height: 1.35;
+}
+.ri-landing-desc {
+  font-size: 15px;
+  font-weight: 400;
+  color: #333333;
+  margin: 0 0 34px 0;
+  line-height: 1.5;
+}
+.ri-btn-open {
+  background: #ea9d34;
+  color: #ffffff;
+  border: 1px solid #df9229;
+  border-radius: 4px;
+  padding: 13px 48px;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.15s ease, box-shadow 0.15s ease;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.08);
+}
+.ri-btn-open:hover {
+  background: #db8e23;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.18);
+}
+.ri-btn-open:active {
+  background: #c87e1a;
+}
+
+/* Modal Overlay & Dialog (Screenshots 2 & 3) */
+.ri-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.45);
+  z-index: 99999;
+  overflow-y: auto;
+  padding: 40px 16px;
+  box-sizing: border-box;
+}
+.ri-dialog {
+  background: #ffffff;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  border-radius: 3px;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.3);
+  border: 1px solid #c1c7d0;
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif;
+  color: #333333;
+}
+
+/* Dialog Body */
+.ri-dialog-body {
+  padding: 24px 28px 12px;
+}
+
+/* Info Box */
+.ri-info-banner {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid #3572b0;
+  border-radius: 3px;
+  margin-bottom: 24px;
+  background: #ffffff;
+  overflow: hidden;
+}
+.ri-info-icon-box {
+  background: #306ea6;
+  width: 44px;
+  min-width: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffffff;
+  flex-shrink: 0;
+}
+.ri-info-circle {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Georgia", serif;
+  font-style: italic;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1;
+}
+.ri-info-text {
+  padding: 14px 18px;
+  font-size: 14px;
+  color: #333333;
+  display: flex;
+  align-items: center;
+}
+
+/* Form Row Structure */
+.ri-form-row {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+.ri-form-label {
+  width: 110px;
+  min-width: 110px;
+  text-align: right;
+  padding-top: 6px;
+  padding-right: 14px;
+  font-size: 14px;
+  color: #707070;
+  box-sizing: border-box;
+  flex-shrink: 0;
+}
+.ri-form-label .ri-req {
+  color: #d04437;
+  margin-left: 2px;
+  font-weight: bold;
+}
+.ri-form-field {
+  flex: 1;
+  min-width: 0;
+}
+
+/* Inputs */
+.ri-input-text {
+  width: 100%;
+  box-sizing: border-box;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  padding: 6px 8px;
+  font-size: 14px;
+  color: #333333;
+  outline: none;
+  background: #ffffff;
+  transition: border-color 0.15s ease;
+}
+.ri-input-text:focus {
+  border: 2px solid #111111;
+  padding: 5px 7px;
+}
+.ri-input-text.ri-error {
+  border: 2px solid #d04437 !important;
+}
+
+.ri-input-short {
+  width: 245px;
+  box-sizing: border-box;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  padding: 6px 8px;
+  font-size: 14px;
+  color: #333333;
+  outline: none;
+  background: #ffffff;
+  transition: border-color 0.15s ease;
+}
+.ri-input-short:focus {
+  border: 1px solid #4a90e2;
+  box-shadow: 0 0 0 1px #4a90e2;
+}
+
+/* Priority Selector */
+.ri-priority-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.ri-select-box {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  background: #ffffff;
+  padding: 3px 28px 3px 8px;
+  min-width: 180px;
+}
+.ri-priority-badge {
+  font-weight: bold;
+  font-size: 15px;
+  color: #e8a735;
+  margin-right: 6px;
+  letter-spacing: -1px;
+}
+.ri-priority-select {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 14px;
+  color: #333333;
+  cursor: pointer;
+  width: 100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+.ri-select-caret {
+  position: absolute;
+  right: 8px;
+  pointer-events: none;
+  color: #707070;
+  font-size: 11px;
+}
+.ri-help-circle {
+  width: 18px;
+  height: 18px;
+  border: 1.5px solid #707070;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #707070;
+  cursor: pointer;
+  user-select: none;
+  flex-shrink: 0;
+}
+
+/* File Input */
+.ri-file-wrap input[type="file"] {
+  font-size: 13px;
+  color: #333333;
+  padding-top: 5px;
+}
+
+/* Components Value */
+.ri-comp-val {
+  padding-top: 6px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #000000;
+}
+
+/* Rich Text Editor */
+.ri-rte-container {
+  border: 1px solid #cccccc;
+  border-radius: 2px;
+  background: #ffffff;
+  overflow: hidden;
+}
+.ri-rte-toolbar {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2px;
+  padding: 4px 6px;
+  background: #f5f5f5;
+  border-bottom: 1px solid #e0e0e0;
+}
+.ri-tb-btn {
+  background: none;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  padding: 3px 6px;
+  font-size: 13px;
+  color: #333333;
+  cursor: pointer;
+  outline: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  font-family: inherit;
+}
+.ri-tb-btn:hover {
+  background: #e8e8e8;
+  border-color: #cccccc;
+}
+.ri-tb-sep {
+  width: 1px;
+  height: 18px;
+  background: #dddddd;
+  margin: 0 4px;
+  display: inline-block;
+}
+.ri-editor-body {
+  min-height: 180px;
+  max-height: 350px;
+  overflow-y: auto;
+  padding: 10px 12px;
+  font-size: 14px;
+  line-height: 1.5;
+  color: #333333;
+  outline: none;
+  background: #ffffff;
+  box-sizing: border-box;
+}
+.ri-editor-body:focus {
+  background: #ffffff;
+}
+
+/* Bottom Editor Helpers */
+.ri-editor-bottom {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+}
+.ri-wiki-icon {
+  width: 18px;
+  height: 14px;
+  background: #2e6da4;
+  border-radius: 1px;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 2px;
+  padding: 0 3px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.ri-wiki-bar {
+  height: 1.5px;
+  background: #ffffff;
+  border-radius: 1px;
+}
+
+/* Modal Footer (Screenshot 3) */
+.ri-dialog-footer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 14px 28px;
+  background: #f7f7f7;
+  border-top: 1px solid #e5e5e5;
+  gap: 16px;
+}
+.ri-btn-submit {
+  background: #2e6da4;
+  color: #ffffff;
+  border: 1px solid #2e6da4;
+  border-radius: 3px;
+  padding: 7px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.15s ease, border-color 0.15s ease;
+}
+.ri-btn-submit:hover {
+  background: #23527c;
+  border-color: #23527c;
+}
+.ri-btn-close-link {
+  color: #2e6da4;
+  font-size: 14px;
+  text-decoration: none;
+  cursor: pointer;
+  padding: 4px 6px;
+  outline: none;
+  background: none;
+  border: none;
+  font-family: inherit;
+}
+.ri-btn-close-link:hover {
+  text-decoration: underline;
+}
+
+/* Success Confirmation State */
+.ri-success-state {
+  display: none;
+  text-align: center;
+  padding: 48px 24px;
+}
+.ri-check-circle {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #27ae60;
+  color: #ffffff;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  margin-bottom: 16px;
+}
+.ri-success-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #222222;
+  margin: 0 0 8px 0;
+}
+.ri-success-desc {
+  font-size: 14px;
+  color: #555555;
+  margin: 0 0 24px 0;
+}
+</style>
+
+<!-- Landing Section (Screenshot 1) -->
+<div class="ri-landing">
+  <h2 class="ri-landing-title">Click the below link to submit the feedback.</h2>
+  <p class="ri-landing-desc">Admin team will review the issue and get back to you with update.</p>
+  <button type="button" class="ri-btn-open" onclick="window.riOpen()">Submit feedback</button>
+</div>
+
+<!-- Modal Popup Dialog (Screenshots 2 & 3) -->
+<div class="ri-overlay" id="riOverlay" onclick="window.riBackdrop(event)">
+  <div class="ri-dialog" id="riDialog" onclick="event.stopPropagation()">
+
+    <!-- Form Section -->
+    <div id="riFormSection">
+      <div class="ri-dialog-body">
+
+        <!-- Top Blue Info Banner -->
+        <div class="ri-info-banner">
+          <div class="ri-info-icon-box">
+            <span class="ri-info-circle">i</span>
+          </div>
+          <div class="ri-info-text">
+            Please provide your feedback below:
+          </div>
+        </div>
+
+        <!-- Summary Field -->
+        <div class="ri-form-row">
+          <label class="ri-form-label" for="riSummary">Summary<span class="ri-req">*</span></label>
+          <div class="ri-form-field">
+            <input type="text" id="riSummary" class="ri-input-text" autocomplete="off" />
+          </div>
+        </div>
+
+        <!-- Priority Field -->
+        <div class="ri-form-row">
+          <label class="ri-form-label" for="riPriority">Priority</label>
+          <div class="ri-form-field">
+            <div class="ri-priority-row">
+              <div class="ri-select-box">
+                <span class="ri-priority-badge" id="riPriorityBadge">=</span>
+                <select id="riPriority" class="ri-priority-select" onchange="window.riUpdatePriority()">
+                  <option value="Highest">&#x2B06; Highest</option>
+                  <option value="High">&#x2B06; High</option>
+                  <option value="Medium" selected>= Medium</option>
+                  <option value="Low">&#x2B07; Low</option>
+                  <option value="Lowest">&#x2B07; Lowest</option>
+                </select>
+                <span class="ri-select-caret">&#9662;</span>
+              </div>
+              <span class="ri-help-circle" title="Priority: Highest, High, Medium, Low, Lowest">?</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Attach file Field -->
+        <div class="ri-form-row">
+          <label class="ri-form-label">Attach file</label>
+          <div class="ri-form-field ri-file-wrap">
+            <input type="file" id="riFile" multiple />
+          </div>
+        </div>
+
+        <!-- Components Field -->
+        <div class="ri-form-row">
+          <label class="ri-form-label">Components</label>
+          <div class="ri-form-field">
+            <div class="ri-comp-val">None</div>
+          </div>
+        </div>
+
+        <!-- Description Field -->
+        <div class="ri-form-row">
+          <label class="ri-form-label" for="riDescription">Description</label>
+          <div class="ri-form-field">
+            <div class="ri-rte-container">
+              <!-- Toolbar -->
+              <div class="ri-rte-toolbar" id="riToolbar">
+                <button type="button" class="ri-tb-btn" onclick="window.riCmd('formatBlock', 'p')">Style <span style="font-size:10px;">▾</span></button>
+                <span class="ri-tb-sep"></span>
+                <button type="button" class="ri-tb-btn" style="font-weight:bold;" title="Bold" onclick="window.riCmd('bold')">B</button>
+                <button type="button" class="ri-tb-btn" style="font-style:italic;" title="Italic" onclick="window.riCmd('italic')">I</button>
+                <button type="button" class="ri-tb-btn" style="text-decoration:underline;" title="Underline" onclick="window.riCmd('underline')">U</button>
+                <button type="button" class="ri-tb-btn" title="Text Color" onclick="document.getElementById('riColorInput').click()">
+                  <span style="text-decoration:underline; text-decoration-color:#d04437; text-decoration-thickness:2px;">A</span> <span style="font-size:10px;">▾</span>
+                </button>
+                <input type="color" id="riColorInput" style="display:none;" onchange="window.riCmd('foreColor', this.value)" />
+                <button type="button" class="ri-tb-btn" title="Font Size" onclick="window.riCycleSize()">
+                  <span style="font-size:11px;">a</span>A <span style="font-size:10px;">▾</span>
+                </button>
+                <span class="ri-tb-sep"></span>
+                <button type="button" class="ri-tb-btn" title="Insert Link" onclick="window.riInsertLink()">🔗 <span style="font-size:10px;">▾</span></button>
+                <span class="ri-tb-sep"></span>
+                <button type="button" class="ri-tb-btn" title="Bullet List" onclick="window.riCmd('insertUnorderedList')">
+                  <svg width="14" height="12" viewBox="0 0 16 14"><circle cx="2" cy="3" r="2" fill="#444"/><line x1="7" y1="3" x2="16" y2="3" stroke="#444" stroke-width="2"/><circle cx="2" cy="7" r="2" fill="#444"/><line x1="7" y1="7" x2="16" y2="7" stroke="#444" stroke-width="2"/><circle cx="2" cy="11" r="2" fill="#444"/><line x1="7" y1="11" x2="16" y2="11" stroke="#444" stroke-width="2"/></svg>
+                </button>
+                <button type="button" class="ri-tb-btn" title="Numbered List" onclick="window.riCmd('insertOrderedList')">
+                  <svg width="14" height="12" viewBox="0 0 16 14"><text x="0" y="5" font-size="6" fill="#444">1.</text><line x1="7" y1="3" x2="16" y2="3" stroke="#444" stroke-width="2"/><text x="0" y="9" font-size="6" fill="#444">2.</text><line x1="7" y1="7" x2="16" y2="7" stroke="#444" stroke-width="2"/><text x="0" y="13" font-size="6" fill="#444">3.</text><line x1="7" y1="11" x2="16" y2="11" stroke="#444" stroke-width="2"/></svg>
+                </button>
+                <span class="ri-tb-sep"></span>
+                <button type="button" class="ri-tb-btn" title="Insert Emoji" onclick="window.riCmd('insertText', '😊')">😊 <span style="font-size:10px;">▾</span></button>
+                <button type="button" class="ri-tb-btn" title="Insert Other" onclick="window.riInsertMore()">+ <span style="font-size:10px;">▾</span></button>
+                <button type="button" class="ri-tb-btn" style="margin-left:auto;" title="Toggle Toolbar" onclick="window.riToggleToolbar()">︽</button>
+              </div>
+
+              <!-- Editable Text Area -->
+              <div id="riDescription" class="ri-editor-body" contenteditable="true"></div>
+            </div>
+
+            <!-- Bottom Markup & Help Icons -->
+            <div class="ri-editor-bottom">
+              <div class="ri-wiki-icon" title="Rich Text Mode">
+                <div class="ri-wiki-bar"></div>
+                <div class="ri-wiki-bar"></div>
+                <div class="ri-wiki-bar"></div>
+              </div>
+              <span class="ri-help-circle" style="width:16px; height:16px; font-size:11px;" title="Formatting Help">?</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Name Field (Screenshot 3) -->
+        <div class="ri-form-row">
+          <label class="ri-form-label" for="riName">Name</label>
+          <div class="ri-form-field">
+            <input type="text" id="riName" class="ri-input-short" autocomplete="name" />
+          </div>
+        </div>
+
+        <!-- Email Field (Screenshot 3) -->
+        <div class="ri-form-row" style="margin-bottom: 24px;">
+          <label class="ri-form-label" for="riEmail">Email</label>
+          <div class="ri-form-field">
+            <input type="email" id="riEmail" class="ri-input-short" autocomplete="email" />
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer (Screenshot 3) -->
+      <div class="ri-dialog-footer">
+        <button type="button" class="ri-btn-submit" id="riBtnSubmit" onclick="window.riSubmit()">Submit</button>
+        <button type="button" class="ri-btn-close-link" onclick="window.riClose()">Close</button>
+      </div>
+    </div>
+
+    <!-- Success Confirmation View -->
+    <div class="ri-success-state" id="riSuccessState">
+      <div class="ri-check-circle">✓</div>
+      <h3 class="ri-success-title">Feedback submitted</h3>
+      <p class="ri-success-desc">Thank you. Admin team will review the issue and get back to you with update.</p>
+      <button type="button" class="ri-btn-submit" onclick="window.riClose()">Close</button>
+    </div>
+
+  </div>
+</div>
+
+<script type="text/javascript">
+(function () {
+  // Ensure functions are attached to window for inline onclick attributes
+  window.riOpen = function () {
+    var overlay = document.getElementById('riOverlay');
+    if (!overlay) return;
+    overlay.style.display = 'block';
+    var formSec = document.getElementById('riFormSection');
+    if (formSec) formSec.style.display = 'block';
+    var succSec = document.getElementById('riSuccessState');
+    if (succSec) succSec.style.display = 'none';
+    var summary = document.getElementById('riSummary');
+    if (summary) {
+      summary.classList.remove('ri-error');
+      setTimeout(function () { summary.focus(); }, 60);
+    }
+  };
+
+  window.riClose = function () {
+    var overlay = document.getElementById('riOverlay');
+    if (overlay) overlay.style.display = 'none';
+  };
+
+  window.riBackdrop = function (e) {
+    if (e.target === document.getElementById('riOverlay')) {
+      window.riClose();
+    }
+  };
+
+  window.riUpdatePriority = function () {
+    var sel = document.getElementById('riPriority');
+    var badge = document.getElementById('riPriorityBadge');
+    if (!sel || !badge) return;
+    var val = sel.value;
+    if (val === 'Highest') {
+      badge.textContent = '⬆';
+      badge.style.color = '#d04437';
+    } else if (val === 'High') {
+      badge.textContent = '⬆';
+      badge.style.color = '#e28020';
+    } else if (val === 'Medium') {
+      badge.textContent = '=';
+      badge.style.color = '#e8a735';
+    } else if (val === 'Low') {
+      badge.textContent = '⬇';
+      badge.style.color = '#27ae60';
+    } else if (val === 'Lowest') {
+      badge.textContent = '⬇';
+      badge.style.color = '#2980b9';
+    }
+  };
+
+  window.riCmd = function (cmd, val) {
+    var desc = document.getElementById('riDescription');
+    if (desc) desc.focus();
+    document.execCommand(cmd, false, val || null);
+  };
+
+  window.riInsertLink = function () {
+    var url = prompt('Enter link URL:', 'https://');
+    if (url) {
+      window.riCmd('createLink', url);
+    }
+  };
+
+  window.riInsertMore = function () {
+    var text = prompt('Insert text or code block:');
+    if (text) {
+      window.riCmd('insertHTML', '<pre style="background:#f4f5f7;padding:8px;border-radius:3px;">' + text + '</pre>');
+    }
+  };
+
+  var currSize = 3;
+  window.riCycleSize = function () {
+    currSize = currSize === 3 ? 4 : (currSize === 4 ? 5 : 3);
+    window.riCmd('fontSize', currSize);
+  };
+
+  window.riToggleToolbar = function () {
+    var tb = document.getElementById('riToolbar');
+    if (!tb) return;
+    tb.style.display = tb.style.display === 'none' ? 'flex' : 'none';
+  };
+
+  window.riSubmit = function () {
+    var summary = document.getElementById('riSummary');
+    if (!summary || !summary.value.trim()) {
+      if (summary) {
+        summary.classList.add('ri-error');
+        summary.focus();
+      }
+      return;
+    }
+    summary.classList.remove('ri-error');
+
+    // Display confirmation
+    var formSec = document.getElementById('riFormSection');
+    if (formSec) formSec.style.display = 'none';
+    var succSec = document.getElementById('riSuccessState');
+    if (succSec) succSec.style.display = 'block';
+
+    // Clear inputs for subsequent submissions
+    summary.value = '';
+    var pri = document.getElementById('riPriority');
+    if (pri) pri.selectedIndex = 2;
+    window.riUpdatePriority();
+    var file = document.getElementById('riFile');
+    if (file) file.value = '';
+    var desc = document.getElementById('riDescription');
+    if (desc) desc.innerHTML = '';
+    var name = document.getElementById('riName');
+    if (name) name.value = '';
+    var email = document.getElementById('riEmail');
+    if (email) email.value = '';
+  };
+
+  // Keyboard shortcut: ESC closes modal
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' || e.keyCode === 27) {
+      window.riClose();
+    }
+  });
+
+  // Delegated click handler on document to guarantee clicks work across dynamic page loads
+  document.addEventListener('click', function (e) {
+    var target = e.target;
+    if (!target) return;
+    if (target.closest && (target.closest('.ri-btn-open') || target.classList.contains('ri-btn-open'))) {
+      window.riOpen();
+    } else if (target.closest && (target.closest('.ri-btn-close-link') || target.classList.contains('ri-btn-close-link'))) {
+      window.riClose();
+    }
+  });
+})();
+</script>
+
+</div>
